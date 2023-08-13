@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  forgetPasswordController,
   loginController,
   registerController,
   testController,
@@ -16,11 +17,19 @@ router.post("/register", registerController);
 //Login || POST
 router.post("/login", loginController);
 
+//Forget Password || POsST
+router.post("/forget-password", forgetPasswordController);
+
 //test routes
 router.get("/test", requireSignIn, isAdmin, testController);
 
-//protected route
+//protected route for users
 router.get("/user-auth", requireSignIn, (req, res) => {
+  res.status(200).send({ ok: true });
+});
+
+//protected route for admin
+router.get("/admin-auth", requireSignIn, isAdmin, (req, res) => {
   res.status(200).send({ ok: true });
 });
 
