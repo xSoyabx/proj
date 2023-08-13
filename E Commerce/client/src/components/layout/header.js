@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../context/Auth";
 import toast from "react-hot-toast";
+import logo from "../../image/Helmet_Logo.png";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -30,11 +31,7 @@ const Header = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <img
-              className="H-logo"
-              src="images\Helmet_logo.png"
-              alt="logo"
-            ></img>
+            <img className="H-logo" src={logo} alt="logo" />
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink
