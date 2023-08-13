@@ -4,29 +4,25 @@ import { NavLink } from "react-router-dom";
 const AdminMenu = () => {
   return (
     <>
-      <div className="list-group">
-        <NavLink
-          to=""
-          className="list-group-item list-group-item-action active"
-          aria-current="true"
-        >
-          The current link item
-        </NavLink>
-        <NavLink to="" className="list-group-item list-group-item-action">
-          Create category abc def
-        </NavLink>
-        <NavLink to="" className="list-group-item list-group-item-action">
-          A third link item
-        </NavLink>
-        <NavLink to="" className="list-group-item list-group-item-action">
-          A fourth link item
-        </NavLink>
-        <NavLink
-          className="list-group-item list-group-item-action disabled"
-          aria-disabled="true"
-        >
-          A disabled link item
-        </NavLink>
+      <div className="text-center">
+        <div className="list-group">
+          <h4>Admin Panel</h4>
+          <NavLink to="/dashboard/admin/create-category" className="list-group-item list-group-item-action">
+            Create Category
+          </NavLink>
+          <NavLink to="/dashboard/admin/create-product" className="list-group-item list-group-item-action">
+            Create Product
+          </NavLink>
+          <NavLink to="/dashboard/admin/users" className="list-group-item list-group-item-action">
+            Users
+          </NavLink>
+          <NavLink
+            className="list-group-item list-group-item-action disabled"
+            aria-disabled="true"
+          >
+            A disabled link item
+          </NavLink>
+        </div>
       </div>
     </>
   );
