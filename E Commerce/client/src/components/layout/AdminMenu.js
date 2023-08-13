@@ -13,7 +13,7 @@ const AdminMenu = () => {
           The current link item
         </NavLink>
         <NavLink to="" className="list-group-item list-group-item-action">
-          Create category
+          Create category abc
         </NavLink>
         <NavLink to="" className="list-group-item list-group-item-action">
           A third link item
