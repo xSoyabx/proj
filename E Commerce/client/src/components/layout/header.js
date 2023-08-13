@@ -93,7 +93,7 @@ const Header = () => {
                         </NavLink>
                       </li>
 
-                      <li className="nav-item">
+                      <li>
                         <NavLink
                           onClick={handleLogout}
                           to="/login"
@@ -107,7 +107,7 @@ const Header = () => {
                 </>
               )}
               <li className="nav-item">
-                <NavLink to="/cart" className="nav-link" href="#">
+                <NavLink to="/cart" className="nav-link">
                   Cart(0)
                 </NavLink>
               </li>
