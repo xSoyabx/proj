@@ -16,12 +16,6 @@ const AdminMenu = () => {
           <NavLink to="/dashboard/admin/users" className="list-group-item list-group-item-action">
             Users
           </NavLink>
-          <NavLink
-            className="list-group-item list-group-item-action disabled"
-            aria-disabled="true"
-          >
-            A disabled link item
-          </NavLink>
         </div>
       </div>
     </>
