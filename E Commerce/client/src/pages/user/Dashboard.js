@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../../components/Layout/layout";
 import UserMenu from "../../components/layout/UserMenu";
 import { useAuth } from "../../context/Auth";
+import Layout from "../../components/layout/layout";
 
 
 const Dashboard = () => {
