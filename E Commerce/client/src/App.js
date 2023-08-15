@@ -14,6 +14,8 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import Users from "./pages/admin/User";
 import CreateProduct from "./pages/admin/CreateProduct";
 import CreateCategory from "./pages/admin/CreateCategory";
+import Orders from './pages/user/Orders';
+import Profile from "./pages/user/Profile";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         </Route>
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
+          <Route path="user/orders" element={<Orders/>}/>
+          <Route path="user/profile" element={<Profile/>}/>
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/forget-password" element={<ForgetPassword />} />
@@ -35,7 +39,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/policy" element={<Policy />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </>
   );

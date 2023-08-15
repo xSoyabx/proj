@@ -1,10 +1,10 @@
 import React from 'react'
-import Layout from './../../components/layout/layout';
+import Layout from '../../components/Layout/layout';
 import UserMenu from '../../components/layout/UserMenu';
 
 const Orders = () => {
   return (
-    <Layout>
+    <Layout title={"Your Orders"}>
         <div className="container-fluid p-3 m-3">
             <div className="row">
             <div className="col-md-3">
