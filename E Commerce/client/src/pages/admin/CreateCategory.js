@@ -110,15 +110,16 @@ const handleDelete= async (id)=>{
                                 <>
                                 <tr>
                                     <td key={c._id}>{c.name}</td>
-                                    </tr> 
-                                    <td><button className="btn btn-primary ms-2" 
+
+                                    <td>
+                                        <button className="btn btn-primary ms-2" 
                                     onClick={()=>{
                                         setVisible(true); setUpdateName(c.name); setSelected(c)}}>Edit</button>
                                     <button className="btn btn-danger ms-2" onClick={()=>{handleDelete(c._id)}}>Delete</button>
-                                     </td>       
+                                     </td>
+                                    </tr>
                                 </>
                             ))}
-                            
                         </tbody>
                     </table>
                     </div>
