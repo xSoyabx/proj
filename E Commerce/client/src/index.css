@@ -25,21 +25,32 @@ font-family: 'Roboto Slab', serif; */
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 18px;
   line-height: 26px;
-  background-color: #333; /* Background color */
+  /* background-color: black; */
   padding: 10px 20px;
   box-shadow: 0 2px 4px;
   border-bottom: 0.5px solid gray;
+  /* background-color: #000000; */
+  /* background-image: linear-gradient(147deg, #000000 0%, #04619f 74%); */
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
 }
 
 .navbar-toggler-icon {
   color: rgb(0, 0, 0); /* Toggler icon color */
 }
 
+/* 
 .navbar-brand {
   font-size: 24px;
-  color: rgb(0, 0, 0); /* Brand text color */
+  color: whitesmoke; 
   font-weight: bold;
   text-decoration: none;
+} */
+
+@font-face {
+  font-family: "lost-treasure";
+  src: local("lost_treasure"),
+    url("./fonts/Lost_Treasure.otf") format("truetype");
 }
 
 .navbar-nav {
@@ -56,14 +67,15 @@ font-family: 'Roboto Slab', serif; */
 
 .nav-link {
   text-decoration: none;
-  color: rgb(9, 9, 9); /* Link text color */
+  color: rgb(255, 255, 255); /* Link text color */
   font-weight: 500;
   transition: color 0.3s;
 }
-
-.active {
-  color: blue; /* Active link text color */
-  border-bottom: 1px solid black;
+.navbar-nav .nav-link.active {
+  background-color: transparent;
+  color: green;
+  border: 1px solid black;
+  border-radius: 20%;
 }
 
 .nav-link:hover {
