@@ -118,7 +118,7 @@ const Login = () => {
   // };
 
   return (
-    <Layout title="Register - Ecommer App">
+    <Layout title="Login">
       <section
         className="body"
         style={{
@@ -166,6 +166,7 @@ const Login = () => {
                   <div class="inputBox">
                     <input type="submit" value="Login" />
                   </div>
+
                   {/* <button className="inputBox-button" type="submit" >
                     LOGIN
                   </button> */}
