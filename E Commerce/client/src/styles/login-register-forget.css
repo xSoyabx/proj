@@ -70,21 +70,21 @@ section .color {
   z-index: 2;
 }
 .box .square:nth-child(4) {
-  bottom: -80px;
+  bottom: -50px;
   left: 100px;
   width: 50px;
   height: 50px;
 }
 .box .square:nth-child(5) {
-  top: -80px;
+  top: -60px;
   left: 140px;
   width: 60px;
   height: 60px;
 }
 .container {
   position: relative;
-  width: 400px;
-  min-height: 400px;
+  width: 360px;
+  max-height: 430px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   display: flex;
@@ -117,7 +117,7 @@ section .color {
   bottom: -10px;
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #e42424, #ffffff);
+  background: linear-gradient(135deg, #fe0707, #ffffff);
 }
 .form .inputBox {
   width: 100%;
@@ -125,7 +125,7 @@ section .color {
 }
 .form .inputBox input {
   width: 100%;
-  background: rgba(72, 72, 72, 0.903);
+  background: rgba(241, 83, 83, 0.903);
   border: none;
   outline: none;
   padding: 10px 20px;
@@ -143,11 +143,11 @@ section .color {
 }
 .form .inputBox input[type="submit"] {
   background: #fff;
-  color: #db2319e6;
+  color: #f15353e6;
   max-width: 100px;
   cursor: pointer;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .forget {
   margin-top: 5px;

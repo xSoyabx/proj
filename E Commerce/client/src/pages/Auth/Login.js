@@ -123,7 +123,7 @@ const Login = () => {
         className="body"
         style={{
           /* backgroundImage: `url(${backgroundImage})` */ 
-          backgroundColor: "black",
+            backgroundColor: "black",
         }}
       >
         <section>
