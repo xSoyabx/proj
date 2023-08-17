@@ -118,7 +118,7 @@ const Login = () => {
   // };
 
   return (
-    <Layout title="Register - Ecommer App">
+    <Layout title="Login">
       <section
         className="body"
         style={{

@@ -3,7 +3,8 @@ import Layout from "../../components/layout/layout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import "../../styles/AuthStyles.css";
+// import "../../styles/AuthStyles.css";
+import "../../styles/login-register-forget.css";
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
@@ -33,6 +34,7 @@ const ForgetPassword = () => {
       toast.error("Something went wrong");
     }
   };
+  /*
   return (
     <Layout title={"Forget Password"}>
       <div className="form-container ">
@@ -78,6 +80,83 @@ const ForgetPassword = () => {
           </button>
         </form>
       </div>
+    </Layout>
+  );
+};
+
+*/
+
+  return (
+    <Layout title="Forget Password">
+      <section
+        className="body"
+        style={{
+          /* backgroundImage: `url(${backgroundImage})` */ backgroundColor:
+            "black",
+        }}
+      >
+        <section>
+          <div className="color"></div>
+          <div className="color"></div>
+          <div className="color"></div>
+          <div className="box">
+            <div className="square" style={{ "-i": 0 }}></div>
+            <div className="square" style={{ "-i": 1 }}></div>
+            <div className="square" style={{ "-i": 2 }}></div>
+            <div className="square" style={{ "-i": 3 }}></div>
+            <div className="square" style={{ "-i": 4 }}></div>
+            <div className="container ">
+              <div className="form">
+                <h2 className="title">Forget Password</h2>
+
+                <form onSubmit={handleSubmit}>
+                  <div className="inputBox">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="form-control"
+                      id="exampleInputEmail1"
+                      placeholder="Enter Your Email "
+                      required
+                    />
+                  </div>
+                  <div className="inputBox">
+                    <input
+                      type="text"
+                      value={answer}
+                      onChange={(e) => setAnswer(e.target.value)}
+                      className="form-control"
+                      id="exampleInputEmail1"
+                      placeholder="Enter Your Favorite Movie ?"
+                      required
+                    />
+                  </div>
+                  <div className="inputBox">
+                    <input
+                      type="password"
+                      value={newPassword}
+                      onChange={(e) => setNewPassword(e.target.value)}
+                      className="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="Enter Your Password"
+                      required
+                    />
+                  </div>
+
+                  <div class="inputBox">
+                    <input type="submit" value="RESET" />
+                  </div>
+
+                  {/* <button type="submit" className="btn btn-primary">
+                    RESET
+                  </button> */}
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
     </Layout>
   );
 };
