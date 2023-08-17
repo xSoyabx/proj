@@ -215,3 +215,88 @@ font-family: 'Roboto Slab', serif; */
 }
 
 /* hello manan */
+
+/* form-textbox-admin css */
+#form-textbox-admin {
+  padding: 20px;
+  width: 450px;
+  height: 20px;
+  border: 10px solid;
+
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+/* outline border of textarea  */
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: inherit;
+  outline: 0;
+  box-shadow: none;
+}
+
+/* admin-submit-button */
+.admin-submit-button {
+  width: 140px;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.admin-submit-button:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+/* category-button-edit | category-button-delete */
+.category-button-edit {
+  font-size: 15px;
+  font-family: Arial;
+  width: 100px;
+  height: 40px;
+  border-width: 1px;
+  color: #fff;
+  margin-right: 10px;
+  border: 0;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  background: linear-gradient(#44c767, #5cbf2a);
+}
+
+.category-button-edit:hover {
+  background: linear-gradient(#5cbf2a, #44c767);
+}
+.category-button-delete {
+  font-size: 15px;
+  font-family: Arial;
+  width: 100px;
+  height: 40px;
+  border-width: 1px;
+  color: #fff;
+  border: 0;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  background: linear-gradient(rgba(226, 13, 13, 1), rgba(141, 11, 11, 1));
+}
+
+.category-button-delete:hover {
+  background: linear-gradient(rgba(141, 11, 11, 1), rgba(226, 13, 13, 1));
+}

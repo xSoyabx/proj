@@ -117,7 +117,7 @@ const CreateCategory = () => {
 
                         <td>
                           <button
-                            className="btn btn-primary ms-2"
+                            className="category-button-edit"
                             onClick={() => {
                               setVisible(true);
                               setUpdateName(c.name);
@@ -127,7 +127,7 @@ const CreateCategory = () => {
                             Edit
                           </button>
                           <button
-                            className="btn btn-danger ms-2"
+                            className="category-button-delete"
                             onClick={() => {
                               handleDelete(c._id);
                             }}
@@ -149,7 +149,7 @@ const CreateCategory = () => {
               <CategoryForm
                 value={updatedName}
                 setValue={setUpdateName}
-                handleSubmit={ handleUpdate }
+                handleSubmit={handleUpdate}
               />
             </Modal>
           </div>
