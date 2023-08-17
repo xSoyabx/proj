@@ -15,8 +15,8 @@ const CategoryForm = ({ handleSubmit, value, setValue }) => {
           />
         </div>
 
-        <button type="submit" className="admin-submit-button">
-          Submit
+        <button type="submit" className="ui-btn">
+          <span> Submit</span>
         </button>
       </form>
     </>
