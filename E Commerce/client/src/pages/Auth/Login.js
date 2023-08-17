@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Layout from "../../components/layout/layout";
 import axios from "axios";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import toast from "react-hot-toast";
-import "../../styles/AuthStyles.css";
+// import "../../styles/AuthStyles.css";
+import "../../styles/login-register-forget.css";
+// import backgroundImage from "../../image/black-bg.jpg";
+
 import { useAuth } from "../../context/Auth";
 
 const Login = () => {
@@ -41,54 +44,161 @@ const Login = () => {
     }
   };
 
+  //   return (
+  //     <Layout title="Register - Ecommer App">
+  //       <section>
+  //         <div className="color" />
+  //         <div className="color" />
+  //         <div className="color" />
+  //         <div className="box">
+  //           <div className="square" style={{ "-i": 0 }} />
+  //           <div className="square" style={{ "-i": 1 }} />
+  //           <div className="square" style={{ "-i": 2 }} />
+  //           <div className="square" style={{ "-i": 3 }} />
+  //           <div className="square" style={{ "-i": 4 }} />
+  //         </div>
+  //       </div>
+
+  //       <div className="container ">
+  //         <div className="form">
+  //           <h2 className="title">LOGIN</h2>
+  //           <form onSubmit={handleSubmit}>
+  //             <div className="inputBox">
+  //               <input
+  //                 type="email"
+  //                 value={email}
+  //                 onChange={(e) => setEmail(e.target.value)}
+  //                 className="form-control"
+  //                 id="exampleInputEmail1"
+  //                 placeholder="Enter Your Email "
+  //                 required
+  //               />
+  //             </div>
+  //             <div className="inputBox">
+  //               <input
+  //                 type="password"
+  //                 value={password}
+  //                 onChange={(e) => setPassword(e.target.value)}
+  //                 className="form-control"
+  //                 id="exampleInputPassword1"
+  //                 placeholder="Enter Your Password"
+  //                 required
+  //               />
+  //             </div>
+
+  //             {/* <div className="forget">
+  //               <button
+  //                 type="button"
+  //                 className="btn btn-primary"
+  //                 onClick={() => {
+  //                   navigate("/forget-password");
+  //                 }}
+  //               >
+  //                 Forget Password
+  //               </button>
+  //             </div> */}
+
+  //             <button type="submit" className="btn btn-primary">
+  //               LOGIN
+  //             </button>
+
+  //             <div>
+  //               <p className="forget">
+  //                 Forgot Password ? <Link to="/forget-password">Click Here</Link>
+  //               </p>
+  //               <p className="forget">
+  //                 Don't have an account ? <Link to="/register">Sign up</Link>
+  //               </p>
+  //             </div>
+  //           </form>
+  //         </div>
+  //       </div>
+  //     </Layout>
+  //   );
+  // };
+
   return (
     <Layout title="Register - Ecommer App">
-      <div className="form-container ">
-        <form onSubmit={handleSubmit}>
-          <h4 className="title">LOGIN</h4>
+      <section
+        className="body"
+        style={{
+          /* backgroundImage: `url(${backgroundImage})` */ backgroundColor:
+            "black",
+        }}
+      >
+        <section>
+          <div className="color"></div>
+          <div className="color"></div>
+          <div className="color"></div>
+          <div className="box">
+            <div className="square" style={{ "-i": 0 }}></div>
+            <div className="square" style={{ "-i": 1 }}></div>
+            <div className="square" style={{ "-i": 2 }}></div>
+            <div className="square" style={{ "-i": 3 }}></div>
+            <div className="square" style={{ "-i": 4 }}></div>
+            <div className="container ">
+              <div className="form">
+                <h2 className="title">LOGIN</h2>
+                <form onSubmit={handleSubmit}>
+                  <div className="inputBox">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="form-control"
+                      id="exampleInputEmail1"
+                      placeholder="Enter Your Email "
+                      required
+                    />
+                  </div>
+                  <div className="inputBox">
+                    <input
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="Enter Your Password"
+                      required
+                    />
+                  </div>
 
-          <div className="mb-3">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="form-control"
-              id="exampleInputEmail1"
-              placeholder="Enter Your Email "
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-control"
-              id="exampleInputPassword1"
-              placeholder="Enter Your Password"
-              required
-            />
-          </div>
+                  <div class="inputBox">
+                    <input type="submit" value="Login" />
+                  </div>
+                  {/* <button className="inputBox-button" type="submit" >
+                    LOGIN
+                  </button> */}
 
-          <div className="mb-3">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={() => {
-                navigate("/forget-password");
-              }}
-            >
-              Forget Password
-            </button>
-          </div>
+                  <div>
+                    <p className="forget">
+                      Forgot Password ?{" "}
+                      <Link to="/forget-password">Click Here</Link>
+                    </p>
+                    <p className="forget">
+                      Don't have an account ?{" "}
+                      <Link to="/register">Sign up</Link>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
 
-          <button type="submit" className="btn btn-primary">
-            LOGIN
-          </button>
-        </form>
-      </div>
+            {/* <div className="forget">
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={() => {
+                    navigate("/forget-password");
+                  }}
+                >
+                  Forget Password
+                </button>
+              </div> */}
+          </div>
+        </section>
+      </section>
     </Layout>
   );
 };
-
 export default Login;
