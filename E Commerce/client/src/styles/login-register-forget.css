@@ -149,6 +149,14 @@ section .color {
   margin-bottom: 20px;
   font-weight: 600;
 }
+.form .inputBox-btn button[type="submit"]{
+  background: #fff;
+  color: #e49124;
+  max-width: 100px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
 .forget {
   margin-top: 5px;
   color: #fff;
