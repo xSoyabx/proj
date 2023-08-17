@@ -122,8 +122,8 @@ const Login = () => {
       <section
         className="body"
         style={{
-          /* backgroundImage: `url(${backgroundImage})` */ backgroundColor:
-            "black",
+          /* backgroundImage: `url(${backgroundImage})` */ 
+          backgroundColor: "black",
         }}
       >
         <section>

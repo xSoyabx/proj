@@ -32,9 +32,9 @@ section .color {
   position: absolute;
   backdrop-filter: blur(5px);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(219, 148, 25, 0.903);
-  border-right: 1px solid rgba(219, 148, 25, 0.903);
-  border-bottom: 1px solid rgba(219, 148, 25, 0.903);
+  border: 1px solid rgba(219, 35, 25, 0.903);
+  border-right: 1px solid rgba(219, 35, 25, 0.903);
+  border-bottom: 1px solid rgba(219, 35, 25, 0.903);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   animation: animate 10s linear infinite;
@@ -92,9 +92,9 @@ section .color {
   align-items: center;
   backdrop-filter: blur(5px);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(219, 148, 25, 0.903);
-  border-right: 1px solid rgba(219, 148, 25, 0.903);
-  border-bottom: 1px solid rgba(219, 148, 25, 0.903);
+  border: 1px solid rgba(219, 35, 25, 0.903);
+  border-right: 1px solid rgba(219, 35, 25, 0.903);
+  border-bottom: 1px solid rgba(219,35, 25, 0.903);
 }
 .form {
   position: relative;
@@ -117,7 +117,7 @@ section .color {
   bottom: -10px;
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #e49124, #ffffff);
+  background: linear-gradient(135deg, #e42424, #ffffff);
 }
 .form .inputBox {
   width: 100%;
@@ -125,14 +125,14 @@ section .color {
 }
 .form .inputBox input {
   width: 100%;
-  background: rgba(219, 148, 25, 0.903);
+  background: rgba(72, 72, 72, 0.903);
   border: none;
   outline: none;
   padding: 10px 20px;
   border-radius: 35px;
-  border: 1px solid rgba(219, 148, 25, 0.903);
-  border-right: 1px solid rgba(219, 148, 25, 0.903);
-  border-bottom: 1px solid rgba(219, 148, 25, 0.903);
+  border: 1px solid rgba(219, 35, 25, 0.903);
+  border-right: 1px solid rgba(219, 35, 25, 0.903);
+  border-bottom: 1px solid rgba(219, 35, 25, 0.903);
   font-size: 16px;
   letter-spacing: 1px;
   color: #fff;
@@ -143,7 +143,7 @@ section .color {
 }
 .form .inputBox input[type="submit"] {
   background: #fff;
-  color: #e49124;
+  color: #db2319e6;
   max-width: 100px;
   cursor: pointer;
   margin-bottom: 20px;
