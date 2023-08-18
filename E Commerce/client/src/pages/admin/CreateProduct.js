@@ -99,22 +99,23 @@ const CreateProduct = () => {
           <div className="col-md-9">
             <h1>Create Product</h1>
             <div className="m-1 w-75">
-              <Select
-                bordered={false}
-                placeholder="Select a category"
-                size="large"
-                showSearch
-                className="form-select mb-3"
-                onChange={(value) => {
-                  setCategory(value);
-                }}
-              >
-                {categories?.map((c) => (
-                  <option key={c._id} value={c._id}>
-                    {c.name}
-                  </option>
-                ))}
-              </Select>
+            <Select
+  bordered={false}
+  placeholder="Select a category"
+  size="large"
+  showSearch
+  className="form-select mb-3"
+  onChange={(value) => {
+    setCategory(value);
+  }}
+>
+  {categories?.map((c) => (
+    <Select.Option key={c._id} value={c._id}>
+      {c.name}
+    </Select.Option>
+  ))}
+</Select>
+
               <div className="mb-3">
                 <label className="btn btn-outline-secondary col-md-12">
                   {photo ? photo.name : "Upload Photo"}
@@ -185,19 +186,20 @@ const CreateProduct = () => {
                 />
               </div>
               <div className="mb-3">
-                <Select
-                  bordered={false}
-                  placeholder="Select Shipping"
-                  size="large"
-                  showSearch
-                  className="form-select mb-3"
-                  onChange={(value) => {
-                    setShipping(value);
-                  }}
-                >
-                  <Option value="0">No</Option>
-                  <Option value="0">Yes</Option>
-                </Select>
+              <Select
+  bordered={false}
+  placeholder="Select Shipping"
+  size="large"
+  showSearch
+  className="form-select mb-3"
+  onChange={(value) => {
+    setShipping(value);
+  }}
+>
+  <Select.Option value="0">No</Select.Option>
+  <Select.Option value="1">Yes</Select.Option>
+</Select>
+
               </div>
               <div className="mb-3">
                 <button className="btn btn-primary" onClick={handleCreate}>

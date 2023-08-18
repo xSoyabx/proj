@@ -149,7 +149,7 @@ const Login = () => {
                       id="exampleInputEmail1"
                       placeholder="Enter Your Email "
                       required
-                      autocomplete="off"
+                      autoComplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -161,11 +161,11 @@ const Login = () => {
                       id="exampleInputPassword1"
                       placeholder="Enter Your Password"
                       required
-                      autocomplete="off"
+                      autoComplete="off"
                     />
                   </div>
 
-                  <div class="inputBox">
+                  <div className="inputBox">
                     <input type="submit" value="Login" />
                   </div>
 
