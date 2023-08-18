@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import toast from "react-hot-toast";
 // import "../../styles/AuthStyles.css";
-import "../../styles/login-register-forget.css";
+import "../../styles/login-forget.css";
 // import backgroundImage from "../../image/black-bg.jpg";
 
 import { useAuth } from "../../context/Auth";

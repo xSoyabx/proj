@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 // import "../../styles/AuthStyles.css";
-import "../../styles/login-register-forget.css";
+import "../../styles/register-style.css";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -139,7 +139,7 @@ const Register = () => {
             <div className="square" style={{ "-i": 2 }}></div>
             <div className="square" style={{ "-i": 3 }}></div>
             <div className="square" style={{ "-i": 4 }}></div>
-            <div className="container ">
+            <div className="container-register ">
               <div className="form">
                 <h2 className="title">Register</h2>
 

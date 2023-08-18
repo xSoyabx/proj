@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 // import "../../styles/AuthStyles.css";
-import "../../styles/login-register-forget.css";
+import "../../styles/login-forget.css";
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
@@ -128,7 +128,7 @@ const ForgetPassword = () => {
                       onChange={(e) => setAnswer(e.target.value)}
                       className="form-control"
                       id="exampleInputEmail1"
-                      placeholder="Enter Your Favorite Movie ?"
+                      placeholder="Enter Your Favorite Movie"
                       required
                     />
                   </div>

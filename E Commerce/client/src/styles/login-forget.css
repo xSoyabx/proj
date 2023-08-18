@@ -9,7 +9,7 @@
   animation: gradient 15s ease infinite;
   height: 100vh; */
 
-  background: linear-gradient(300deg, #181818, #131212, #151414);
+  background: linear-gradient(300deg, #7e1f1f, #070606, #232323);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
 }
@@ -41,10 +41,6 @@ section .color {
   header {
     padding: 50px;
   }
-  .sci {
-    right: 70px;
-    top: 70px;
-  }
 }
 .box {
   position: relative;
@@ -56,7 +52,7 @@ section .color {
   border: 1px solid rgba(219, 35, 25, 0.903);
   border-right: 1px solid rgba(219, 35, 25, 0.903);
   border-bottom: 1px solid rgba(219, 35, 25, 0.903);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(47, 47, 47, 0.192);
   border-radius: 10px;
   animation: animate 10s linear infinite;
   animation-delay: calc(-1s * var(--i));
@@ -106,13 +102,14 @@ section .color {
   position: relative;
   width: 360px;
   max-height: 430px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.064);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.676); */
+  box-shadow: 0 25px 45px rgba(255, 253, 253, 0.1);
   border: 1px solid rgba(219, 35, 25, 0.903);
   border-right: 1px solid rgba(219, 35, 25, 0.903);
   border-bottom: 1px solid rgba(219, 35, 25, 0.903);
