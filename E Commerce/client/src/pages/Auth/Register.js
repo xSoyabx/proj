@@ -141,7 +141,7 @@ const Register = () => {
             <div className="square" style={{ "--i": 4 }}></div>
             <div className="container-register ">
               <div className="form">
-                <h2 className="title">Register</h2>
+                <h2 className="title">REGISTER</h2>
 
                 <form onSubmit={handleSubmit}>
                   <div className="inputBox">
