@@ -154,6 +154,7 @@ const Register = () => {
                       placeholder="Enter Your Name"
                       required
                       autoFocus
+                      autocomplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -165,6 +166,7 @@ const Register = () => {
                       id="exampleInputEmail1"
                       placeholder="Enter Your Email "
                       required
+                      autocomplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -176,6 +178,7 @@ const Register = () => {
                       id="exampleInputPassword1"
                       placeholder="Enter Your Password"
                       required
+                      autocomplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -187,6 +190,7 @@ const Register = () => {
                       id="exampleInputEmail1"
                       placeholder="Enter Your Phone"
                       required
+                      autocomplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -198,6 +202,7 @@ const Register = () => {
                       id="exampleInputEmail1"
                       placeholder="Enter Your Address"
                       required
+                      autocomplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -209,6 +214,7 @@ const Register = () => {
                       id="exampleInputEmail1"
                       placeholder="What Is Your Favorite Movie ?"
                       required
+                      autocomplete="off"
                     />
                   </div>
 

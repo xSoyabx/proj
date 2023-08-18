@@ -119,6 +119,7 @@ const ForgetPassword = () => {
                       id="exampleInputEmail1"
                       placeholder="Enter Your Email "
                       required
+                      autocomplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -130,6 +131,7 @@ const ForgetPassword = () => {
                       id="exampleInputEmail1"
                       placeholder="Enter Your Favorite Movie"
                       required
+                      autocomplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -141,6 +143,7 @@ const ForgetPassword = () => {
                       id="exampleInputPassword1"
                       placeholder="Enter Your Password"
                       required
+                      autocomplete="off"
                     />
                   </div>
 
