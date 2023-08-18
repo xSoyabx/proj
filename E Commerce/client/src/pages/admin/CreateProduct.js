@@ -15,6 +15,7 @@ const CreateProduct = () => {
   const [price, setPrice] = useState("");
   const [photo, setPhoto] = useState("");
   const [category, setCategory] = useState("");
+  const [brand, setBrand] = useState("");
   const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
 
@@ -70,8 +71,9 @@ const CreateProduct = () => {
       productData.append("price", price);
       productData.append("quantity", quantity);
       productData.append("photo", photo);
+      productData.append("brand", brand);
       productData.append("category", category);
-      const { data } = axios.post(
+      const { data } = await axios.post(
         "/api/v1/product/create-product",
         productData
       );
@@ -136,6 +138,15 @@ const CreateProduct = () => {
                     />
                   </div>
                 )}
+              </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  value={brand}
+                  placeholder="write a Brand name"
+                  className="form-control"
+                  onChange={(e) => setBrand(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <input
