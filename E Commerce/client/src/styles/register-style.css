@@ -164,6 +164,8 @@
     color: #f15353e6;
     max-width: 100px;
     cursor: pointer;
+    padding: 13px;
+    font-size: 17px;
     margin-bottom: 20px;
     font-weight: 700;
   }
