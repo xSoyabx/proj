@@ -30,11 +30,18 @@ export const createProductController = async (req, res) => {
         return res.status(500).send({ error: "Category is required" });
       case !quantity:
         return res.status(500).send({ error: "Quantity is required" });
-      case photo && photo.size > 10000:
+      case !photo:
+        return res.status(500).send({ error: "Photo is required" });
+      case photo.size > 10000000:
         return res
           .status(500)
-          .send({ error: "Photo is required and should be less than 10 mb" });
+          .send({ error: "Photo should be less than 10 MB" });
     }
+    //   case (photo && photo.size <= 10000000):
+    //     return res
+    //       .status(500)
+    //       .send({ error: "Photo is required and should be less than 10 mb" });
+    // }
 
     const products = await productModel({ ...req.fields, slug: slugify(name) });
     if (photo) {
