@@ -122,8 +122,8 @@ const Login = () => {
       <section
         className="body"
         style={{
-          /* backgroundImage: `url(${backgroundImage})` */ 
-            backgroundColor: "black",
+          /* backgroundImage: `url(${backgroundImage})` */
+          backgroundColor: "black",
         }}
       >
         <section>
@@ -132,7 +132,7 @@ const Login = () => {
           <div className="color"></div>
           <div className="box">
             <div className="square" style={{ "--i": 0 }}></div>
-            <div className="square" style={{ "--i": 1 }}></div>  
+            <div className="square" style={{ "--i": 1 }}></div>
             <div className="square" style={{ "--i": 2 }}></div>
             <div className="square" style={{ "--i": 3 }}></div>
             <div className="square" style={{ "--i": 4 }}></div>
@@ -149,6 +149,7 @@ const Login = () => {
                       id="exampleInputEmail1"
                       placeholder="Enter Your Email "
                       required
+                      autocomplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -160,6 +161,7 @@ const Login = () => {
                       id="exampleInputPassword1"
                       placeholder="Enter Your Password"
                       required
+                      autocomplete="off"
                     />
                   </div>
 
