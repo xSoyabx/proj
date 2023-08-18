@@ -19,17 +19,22 @@ const UpdateProduct = () => {
     const [brand, setBrand] = useState("");
     const [quantity, setQuantity] = useState("");
     const [shipping, setShipping] = useState("");
+    const [id,setId] = useState("")
 
     //get single product
     const getSingleProduct = async () => {
         try {
-          const { data } = await axios.get(
-            `http://localhost:3000/api/v1/product/get-product/${params.slug}`
-          );
+          const { data } = await axios.get(`/api/v1/product/get-product/${params.slug}`);
+          // (`/api/v1/product/get-product/${params.slug}`);
           setName(data.product.name);
+          setId(data.product._id);
+          setBrand(data.product.brand);
+          setDescription(data.product.description);
+          setPrice(data.product.price);
+          setQuantity(data.product.quantity);
         } catch (error) {
           console.log(error);
-          toast.error("Something went wrong in getting single product");
+          // toast.error("Something went wrong in getting single product");
         }
       };
       
@@ -180,18 +185,19 @@ const UpdateProduct = () => {
               </div>
               <div className="mb-3">
               <Select
-  bordered={false}
-  placeholder="Select Shipping"
-  size="large"
-  showSearch
-  className="form-select mb-3"
-  onChange={(value) => {
-    setShipping(value);
-  }}
->
-  <Select.Option value="0">No</Select.Option>
-  <Select.Option value="1">Yes</Select.Option>
-</Select>
+                bordered={false}
+                placeholder="Select Shipping"
+                size="large"
+                showSearch
+                className="form-select mb-3"
+                onChange={(value) => {
+                  setShipping(value);
+                }}
+                value={shipping ? "Yes" : "No"}
+              >
+                <Select.Option value="0">No</Select.Option>
+                <Select.Option value="1">Yes</Select.Option>
+              </Select>
 
               </div>
               <div className="mb-3">

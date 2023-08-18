@@ -4,7 +4,7 @@
     color: inherit;
   }
   
-  .product-card {
+  .card-img-top {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
@@ -14,27 +14,27 @@
     background-color: #ffffff;
   }
   
-  .product-card:hover {
+  .card-img-top:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-  .product-card img {
+  .card-img-top img {
     object-fit: cover;
     height: 180px;
   }
   
-  .product-card .card-body {
+  .card-img-top .card-body {
     padding: 15px;
   }
   
-  .product-card .card-title {
+  .card-img-top .card-title {
     font-size: 18px;
     margin-bottom: 8px;
     color: #333;
   }
   
-  .product-card .card-text {
+  .card-img-top .card-text {
     font-size: 14px;
     color: #777;
     margin-bottom: 10px;

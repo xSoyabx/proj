@@ -204,6 +204,13 @@ font-family: 'Roboto Slab', serif; */
   font-family: "Nunito Sans", sans-serif;
 }
 
+/*=======================*/
+.product-link{
+  text-decoration: none;
+  color: black !important;
+}
+
+
 /* ========= About ========= */
 .about {
   margin: 0;

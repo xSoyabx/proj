@@ -161,10 +161,11 @@ section .color {
 }
 .form .inputBox input[type="submit"] {
   background: #fff;
-  text-align: center;
-  color: #b54646e6;
-  max-width: 140px;
+  color: #f15353e6;
+  max-width: 100px;
   cursor: pointer;
+  padding: 13px;
+  font-size: 17px;
   margin-bottom: 20px;
   font-weight: 700;
 }
