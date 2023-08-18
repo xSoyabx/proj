@@ -789,3 +789,64 @@ font-family: 'Roboto Slab', serif; */
 .category-button-delete:hover {
   background: linear-gradient(rgba(141, 11, 11, 1), rgba(226, 13, 13, 1));
 } */
+
+/* Products.css */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 18rem;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  object-fit: cover;
+  height: 180px;
+}
+
+.product-card .card-body {
+  padding: 15px;
+}
+
+.product-card .card-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.product-card .card-text {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Button Styles */
+.product-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.product-button:hover {
+  background-color: #0056b3;
+}

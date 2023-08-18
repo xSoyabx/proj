@@ -66,7 +66,7 @@ export const createProductController = async (req, res) => {
 
 export const getProductController = async (req, res) => {
   try {
-    const product = await productModel
+    const products = await productModel
       .find({})
       .populate("category")
       .select("-photo")
@@ -74,9 +74,9 @@ export const getProductController = async (req, res) => {
       .sort({ ceatedAt: -1 });
     res.status(200).send({
       success: true,
-      total: product.length,
+      total: products.length,
       message: "All Products",
-      product,
+      products,
     });
   } catch (error) {
     console.error(error);
