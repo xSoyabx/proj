@@ -2,7 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../context/Auth";
 import toast from "react-hot-toast";
-import logo from "../../image/Helmet_Logo.png";
+import logo from "../../image/helmet.png";
+import "../../fonts/Lost_Treasure.otf";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -17,7 +18,7 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -31,7 +32,25 @@ const Header = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <img className="H-logo" src={logo} alt="logo" />
+            <div className="logo">
+              <img className="H-logo" src={logo} alt="logo" />
+            </div>
+            <div>
+              <NavLink to="/" style={{ textDecoration: "none" }}>
+                <span
+                  className="logo-font"
+                  style={{
+                    color: "Red",
+                    fontSize: "25px",
+                    fontFamily: "lost-treasure",
+                    cursor: "pointer",
+                  }}
+                >
+                  Rohini Helmets
+                </span>
+              </NavLink>
+            </div>
+            {/* <img className="H-logo" src={logo} alt="logo" /> */}
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink
