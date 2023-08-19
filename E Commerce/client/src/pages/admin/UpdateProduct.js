@@ -28,6 +28,7 @@ const UpdateProduct = () => {
         `/api/v1/product/get-product/${params.slug}`
       );
       setName(data.product.name);
+      setBrand(data.product.brand);
       setId(data.product._id);
       setDescription(data.product.description);
       setPrice(data.product.price);
