@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Libre+Baskerville&family=Nunito+Sans:opsz,wght@6..12,300&family=REM&family=Raleway:wght@300&family=Roboto+Slab&display=swap");
 
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+/* Colors */
+:root {
+  --color-default: #212529;
+  --color-primary: #ce1212;
+  --color-secondary: #37373f;
+}
+
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,21 +40,31 @@ font-family: 'Roboto Slab', serif; */
 }
 
 .navbar {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
+  font-family: var(--font-default);
   font-size: 18px;
   line-height: 26px;
   /* background-color: black; */
   padding: 10px 20px;
   box-shadow: 0 2px 4px;
-  border-bottom: 0.5px solid gray;
+  border-bottom: 0.5px solid rgb(226, 226, 226);
+  /* background: rgba(0, 0, 0, 0.064); */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(255, 253, 253, 0.1);
+  /* background-image: linear-gradient(147deg, #000000 0%, #182839 74%); */
   /* background-color: #000000; */
   /* background-image: linear-gradient(147deg, #000000 0%, #04619f 74%); */
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  /* background-color: #000000; */
+  /* background-image: linear-gradient(147deg, #000000 0%, #434343 74%); */
+}
+
+button.navbar-toggler{
+  margin-bottom: 15px;
 }
 
 .navbar-toggler-icon {
-  color: rgb(0, 0, 0); /* Toggler icon color */
+  color: rgb(255, 255, 255); 
+  /* Toggler icon color */
 }
 
 /* 
@@ -55,32 +83,73 @@ font-family: 'Roboto Slab', serif; */
 
 .navbar-nav {
   list-style: none;
-  display: flex;
+  float: left;
+  /* display: flex;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 0; */
 }
 
 .nav-item {
   margin-right: 20px;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
 }
 
 .nav-link {
   text-decoration: none;
-  color: rgb(255, 255, 255); /* Link text color */
-  font-weight: 500;
+  color: rgb(47, 47, 47); /* Link text color */
+  font-weight: 600;
   transition: color 0.3s;
 }
 .navbar-nav .nav-link.active {
   background-color: transparent;
-  color: green;
-  border: 1px solid black;
-  border-radius: 20%;
+  color: rgb(255, 99, 99);
+  text-decoration: none;
+  /* border: 1px solid black;
+  border-radius: 25%; */
 }
 
-.nav-link:hover {
-  color: orange; /* Hover link text color */
+.navbar>ul>li>a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: var(--color-primary);
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
 }
+
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #5a5a5a;
+}
+
+ .navbar>ul>li {
+    white-space: nowrap;
+    padding: 10px 0 10px 28px;
+  }
+
 
 /* Cart link */
 .nav-link.cart-link {
@@ -142,7 +211,7 @@ font-family: 'Roboto Slab', serif; */
 }
 
 .footer a:hover {
-  color: #696969;
+  color: #ce2d2d;
 }
 
 /* =================================

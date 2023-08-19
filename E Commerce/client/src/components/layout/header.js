@@ -32,18 +32,20 @@ const Header = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <div className="logo">
+            {/* <div className="logo">
               <img className="H-logo" src={logo} alt="logo" />
-            </div>
+            </div> */}
             <div>
               <NavLink to="/" style={{ textDecoration: "none" }}>
                 <span
                   className="logo-font"
                   style={{
                     color: "Red",
-                    fontSize: "25px",
+                    fontSize: "23px",
                     fontFamily: "lost-treasure",
                     cursor: "pointer",
+                    marginRight: "30px",
+                    marginLeft: "20px",
                   }}
                 >
                   Rohini Helmets
@@ -51,6 +53,7 @@ const Header = () => {
               </NavLink>
             </div>
             {/* <img className="H-logo" src={logo} alt="logo" /> */}
+            <div className="header">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink
@@ -128,6 +131,7 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
+          </div>
           </div>
         </div>
       </nav>
