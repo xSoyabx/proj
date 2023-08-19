@@ -4,8 +4,10 @@ import { useAuth } from "../context/Auth";
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
 import { prices } from "../components/prices";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate=useNavigate()
   const [auth, setAuth] = useAuth();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -155,7 +157,7 @@ const HomePage = () => {
                     {p.description.substring(0, 45)}...
                   </p>
                   <p className="card-text">₹ {p.price}</p>
-                  <button className="btn btn-primary ms-2">More Details</button>
+                  <button className="btn btn-primary ms-2" onClick={()=>navigate(`/product/${p.slug}`)}>More Details</button>
                   <button className="btn btn-secondary ms-2">
                     Add to cart
                   </button>
