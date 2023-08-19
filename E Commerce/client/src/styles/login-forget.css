@@ -73,7 +73,7 @@ section .color {
   height: 100px;
 }
 .box .square:nth-child(2) {
-  top: 400px;
+  top: 350px;
   left: -98px;
   width: 120px;
   height: 120px;

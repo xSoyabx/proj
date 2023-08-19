@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../context/Auth";
 import toast from "react-hot-toast";
-import logo from "../../image/helmet.png";
+// import logo from "../../image/helmet.png";
 import "../../fonts/Lost_Treasure.otf";
 
 const Header = () => {

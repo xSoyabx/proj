@@ -46,11 +46,14 @@ font-family: 'Roboto Slab', serif; */
   line-height: 26px;
   /* background-color: black; */
   padding: 10px 20px;
-  box-shadow: 0 2px 4px;
-  border-bottom: 0.5px solid rgb(226, 226, 226);
-  /* background: rgba(0, 0, 0, 0.064); */
+  background: linear-gradient(300deg, #4a0707, #070606, #232323);
+  background-size: 180% 180%;
+  animation: gradient-animation 20s ease infinite;
+   box-shadow: 0 2px 4px;
+  border-bottom: 0.5px solid rgb(226, 226, 226); 
+  /* background: rgba(0, 0, 0, 0.064); 
   backdrop-filter: blur(5px);
-  box-shadow: 0 25px 45px rgba(255, 253, 253, 0.1);
+  box-shadow: 0 25px 45px rgba(255, 253, 253, 0.1);*/
   /* background-image: linear-gradient(147deg, #000000 0%, #182839 74%); */
   /* background-color: #000000; */
   /* background-image: linear-gradient(147deg, #000000 0%, #04619f 74%); */
@@ -106,13 +109,13 @@ button.navbar-toggler{
 
 .nav-link {
   text-decoration: none;
-  color: rgb(47, 47, 47); /* Link text color */
+  color: rgb(103, 102, 102); /* Link text color */
   font-weight: 600;
   transition: color 0.3s;
 }
 .navbar-nav .nav-link.active {
   background-color: transparent;
-  color: rgb(255, 99, 99);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   /* border: 1px solid black;
   border-radius: 25%; */
@@ -200,8 +203,13 @@ button.navbar-toggler{
   color: white;
   padding: 25px;
   /* gradient dark  */
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  background: linear-gradient(300deg, #4a0707, #070606, #232323);
+  background-size: 180% 180%;
+  animation: gradient-animation 20s ease infinite;
+   box-shadow: 0 2px 4px;
+  border-top: 0.5px solid rgb(226, 226, 226);
+  /* background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
 }
 
 .footer a {
@@ -211,7 +219,7 @@ button.navbar-toggler{
 }
 
 .footer a:hover {
-  color: #ce2d2d;
+  color: rgb(250, 94, 94);
 }
 
 /* =================================
