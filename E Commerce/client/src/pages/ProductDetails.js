@@ -52,15 +52,39 @@ const ProductDetails = () => {
         <h6>Name : {product.name}</h6>
         <h6>Description : {product.description}</h6>
         <h6>Price : {product.price}</h6>
-        {/* <h6>Category : {product.category.name}</h6> */}
+        <h6>Category : {product?.category?.name}</h6>
         <button className="btn btn-secondary ms-2">
                     Add to cart
                   </button>
       </div>
       </div>
-      <div className='row'>
-        <h1>Similar Products</h1>
-        {JSON.stringify(relatedProducts,null,4)}
+      <hr/>
+
+      <div className='row container'>
+        <h6>Similar Products</h6>
+        {relatedProducts.length<1 && (<p className='text-center'>No Similar Product Found</p>)}
+        <div className="d-flex flex wrap">
+            {relatedProducts?.map((p) => (
+              <div className="card m-2" style={{ width: "18rem" }}>
+                <img
+                  src={`/api/v1/product/product-photo/${p._id}`}
+                  className="card-img-top"
+                  alt={p.name}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{p.name}</h5>
+                  <p className="card-text">
+                    {p.description.substring(0, 45)}...
+                  </p>
+                  <p className="card-text">₹ {p.price}</p>
+              
+                  <button className="btn btn-secondary ms-2">
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
       </div>
     </Layout>
   )
