@@ -1,38 +1,115 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+// import "//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css";
+// import"//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js";
+// import "cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js";
+import Policy from "./../../pages/Policy";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12 col-lg-4">
-            <div className="dk-footer-box-info">
-              <NavLink to="/" style={{ textDecoration: "none" }}>
-                <span
-                  className="footer-logo"
-                  style={{
-                    color: "Red",
-                    fontSize: "23px",
-                    fontFamily: "lost-treasure",
-                    cursor: "pointer",
-                    marginRight: "30px",
-                    marginLeft: "20px",
-                  }}
-                >
-                  Rohini Helmets
-                </span>
-              </NavLink>
-                  <p class="footer-info-text">
-                     Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
-                  </p>
+    <div>
+        {/* <div className="container-footer"> */}
+            <div className="col-md-14 col-lg-13">
+              <div className="container-footer">
+                <NavLink to="/" style={{ textDecoration: "none" }}>
+                  <span
+                    className="footer-logo"
+                    style={{
+                      color: "Red",
+                      fontSize: "23px",
+                      fontFamily: "lost-treasure",
+                      cursor: "pointer",
+                      marginRight: "30px",
+                      marginLeft: "20px",
+                    }}
+                  >
+                    Rohini Helmets
+                  </span>
+                </NavLink>
+                <p className="footer-info-text">
+                  Reference site about Lorem Ipsum, giving information on its
+                  origins, as well as a random Lipsum generator.
+                </p>
+                {/* <div className="footer-social-link">
+                  <h3>Follow us</h3>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i className="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i className="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div> */}
+              </div>
+            {/* </div> */}
+          {/* </div> */}
+      </div>
+
+      <div className="copyright">
+        <div className="container-end-footer">
+          <div className="row">
+            <div className="col-md-6">
+              <span>Copyright © 2019, All Right Reserved Seobin</span>
+            </div>
+            <div className="col-md-6">
+              <div className="copyright-menu">
+                <ul>
+                  <li>
+                    <NavLink to="/" className="nav-link" aria-current="page">
+                      Home
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="#" className="nav-link" aria-current="page">
+                      Terms
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/policy"
+                      className="nav-link"
+                      aria-current="page"
+                    >
+                      Privacy Policy
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/contact"
+                      className="nav-link"
+                      aria-current="page"
+                    >
+                      Contact
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div id="back-to-top" className="back-to-top">
+        <button
+          className="btn btn-dark"
+          title="Back to Top"
+          style={{ display: "block" }}
+        >
+          <i className="fa fa-angle-up"></i>
+        </button>
+      </div>
     </div>
-      
-      /* <h4 className="text-center">
+  );
+};
+
+export default Footer;
+
+/* <h4 className="text-center">
         2023 Bike Helmets & Accessories. All rights reserved &copy; Rohini
         Helmet.
         <p className="text-center mt-3">
@@ -41,7 +118,3 @@ const Footer = () => {
         </p>
       </h4> 
         </div>*/
-  );
-};
-
-export default Footer;
