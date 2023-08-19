@@ -4,6 +4,7 @@ import { useAuth } from "../context/Auth";
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
 import { prices } from "../components/prices";
+import styles from "../styles/productCard.css"
 
 const HomePage = () => {
   const [auth, setAuth] = useAuth();
@@ -104,77 +105,112 @@ const HomePage = () => {
   };
   return (
     <Layout title={"All Products"}>
-      <div className="row mt-2">
-        <div className="col-md-2">
-          {/* category filter  */}
-          <h4 className="text-center">Filter by category</h4>
-          <div className="d-flex flex-column">
-            {categories?.map((c) => (
-              <Checkbox
-                key={c._id}
-                onChange={(e) => handleFilter(e.target.checked, c._id)}
+      <div className="container-fluid row mt-3">
+        <div className="row mt-2">
+          <div className="col-md-2">
+            {/* category filter  */}
+            <h4 className="text-center">Filter by category</h4>
+            <div className="d-flex flex-column">
+              {categories?.map((c) => (
+                <Checkbox
+                  key={c._id}
+                  onChange={(e) => handleFilter(e.target.checked, c._id)}
+                >
+                  {c.name}
+                </Checkbox>
+              ))}
+            </div>
+
+            {/* price filter */}
+            <h4 className="text-center mt-4">Filter by price</h4>
+            <div className="d-flex flex-column">
+              <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+                {prices?.map((p) => (
+                  <div key={p._id}>
+                    <Radio value={p.array}>{p.name}</Radio>
+                  </div>
+                ))}
+              </Radio.Group>
+            </div>
+            <div className="d-flex flex-column">
+              <button
+                className="btn btn-danger"
+                onClick={() => window.location.reload()}
               >
-                {c.name}
-              </Checkbox>
-            ))}
+                RESET FILTERS
+              </button>
+            </div>
           </div>
 
-          {/* price filter */}
-          <h4 className="text-center mt-4">Filter by price</h4>
-          <div className="d-flex flex-column">
-            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
-              {prices?.map((p) => (
-                <div key={p._id}>
-                  <Radio value={p.array}>{p.name}</Radio>
+          {/* <div className="d-flex flex-wrap">
+              {products?.map((p) => (
+                <div
+                  className="card m-2"
+                  style={{ width: "18rem" }}
+                  key={p._id}
+                >
+                  <img
+                    src={`/api/v1/product/product-photo/${p._id}`}
+                    className="card-img-top"
+                    alt={p.name}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{p.name}</h5>
+                    <p className="card-text">
+                      {p.description.substring(0, 30)}...
+                    </p>
+                    <p className="card-text">₹ {p.price}</p>
+                    <button className="btn btn-primary ms-2">
+                      More Details
+                    </button>
+                    <button className="btn btn-secondary ms-2">
+                      Add to cart
+                    </button>
+                  </div>
                 </div>
               ))}
-            </Radio.Group>
-          </div>
-          <div className="d-flex flex-column">
-            <button
-              className="btn btn-danger"
-              onClick={() => window.location.reload()}
-            >
-              RESET FILTERS
-            </button>
-          </div>
-        </div>
-        <div className="col-md-9">
-          <h1 className="text-center">All Products</h1>
-          <div className="d-flex flex wrap">
-            {products?.map((p) => (
-              <div className="card m-2" style={{ width: "18rem" }}>
-                <img
-                  src={`/api/v1/product/product-photo/${p._id}`}
-                  className="card-img-top"
-                  alt={p.name}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{p.name}</h5>
-                  <p className="card-text">
-                    {p.description.substring(0, 45)}...
-                  </p>
-                  <p className="card-text">₹ {p.price}</p>
-                  <button className="btn btn-primary ms-2">More Details</button>
-                  <button className="btn btn-secondary ms-2">
-                    Add to cart
-                  </button>
+            </div> */}
+
+          <div className="col-md-9 offset-1">
+            <h1 className="text-center">All Products</h1>
+            <div className="d-flex flex-wrap">
+              {products?.map((p) => (
+                <div className={`card ${styles.searchResultsContainer}`} key={p._id}>
+                  <div className="product-image-container">
+                    <img
+                      className="product-image"
+                      src={`/api/v1/product/product-photo/${p._id}`}
+                      alt="Product Image"
+                    />
+                  </div>
+                  <div className="product-details">
+                    <h3 className="product-name">{p.name}</h3>
+                    <p className="product-description">
+                      {p.description.substring(0, 30)}...
+                    </p>
+                    <p className="product-price">₹ {p.price}</p>
+                  </div>
+                  <div className="buttons-container">
+                    <button className="button">More Details</button>
+                    <button className="button">Add to Cart</button>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="m-2 p-3">
-            {products && products.length < total && (
-              <button
-                className="btn btn-warning"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setPage(page + 1);
-                }}
-              >
-                {loading ? "Loading ..." : "Loadmore"}
-              </button>
-            )}
+              ))}
+            </div>
+
+            <div className="m-2 p-3">
+              {products && products.length < total && (
+                <button
+                  className="btn btn-warning"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setPage(page + 1);
+                  }}
+                >
+                  {loading ? "Loading ..." : "Loadmore"}
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+.card {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold; /* Set font weight to bold */
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  width: 300px;
+  margin: 20px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-container {
+  overflow: hidden;
+  position: relative;
+  padding: 10px; /* Add padding for spacing */
+  border-radius: 10px 10px 0 0; /* Rounded corners on top */
+}
+
+.product-image {
+  width: 100%;
+  border: 1px solid black;
+  height: 200px; /* Adjust the height to fit the container */
+  transition: transform 0.3s ease;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 10px; /* Rounded corners on all sides in default state */
+}
+
+.product-image:hover {
+  transform: scale(1.1);
+  border-radius: 10px 10px 0 0; /* Rounded corners on top during hover */
+}
+
+.product-details {
+  padding: 20px;
+  padding-bottom: 15px;
+}
+
+.product-name {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold; /* Set font weight to bold */
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #676161;
+  margin-bottom: 15px;
+  font-weight: bold; /* Set font weight to bold */
+}
+
+.product-price {
+  font-size: 1.3rem;
+  color: #ff5722;
+  margin-bottom: 15px;
+  font-weight: bold; /* Set font weight to bold */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold; /* Set font weight to bold */
+  transition: background-color 0.3s ease;
+  width: 120px;
+  height: 45px;
+}
+
+.button:hover {
+  background-color: #ff8a50;
+}
