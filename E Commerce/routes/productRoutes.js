@@ -29,7 +29,7 @@ router.get("/get-product/:slug", singleProductController);
 router.get("/product-photo/:pid", productPhotoController);
 
 //delete product
-router.delete("/product/:pid", deleteProduct);
+router.delete("/delete-product/:pid", deleteProduct);
 
 //update product
 router.put(

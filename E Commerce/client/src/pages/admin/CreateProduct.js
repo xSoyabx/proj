@@ -99,22 +99,22 @@ const CreateProduct = () => {
           <div className="col-md-9">
             <h1>Create Product</h1>
             <div className="m-1 w-75">
-            <Select
-  bordered={false}
-  placeholder="Select a category"
-  size="large"
-  showSearch
-  className="form-select mb-3"
-  onChange={(value) => {
-    setCategory(value);
-  }}
->
-  {categories?.map((c) => (
-    <Select.Option key={c._id} value={c._id}>
-      {c.name}
-    </Select.Option>
-  ))}
-</Select>
+              <Select
+                bordered={false}
+                placeholder="Select a category"
+                size="large"
+                showSearch
+                className="form-select mb-3"
+                onChange={(value) => {
+                  setCategory(value);
+                }}
+              >
+                {categories?.map((c) => (
+                  <Select.Option key={c._id} value={c._id}>
+                    {c.name}
+                  </Select.Option>
+                ))}
+              </Select>
 
               <div className="mb-3">
                 <label className="btn btn-outline-secondary col-md-12">
@@ -144,7 +144,7 @@ const CreateProduct = () => {
                 <input
                   type="text"
                   value={brand}
-                  placeholder="write a Brand name"
+                  placeholder="write Brand name"
                   className="form-control"
                   onChange={(e) => setBrand(e.target.value)}
                 />
@@ -159,7 +159,7 @@ const CreateProduct = () => {
                 />
               </div>
               <div className="mb-3">
-                <input
+                <textarea
                   type="text"
                   value={description}
                   placeholder="write a description"
@@ -186,20 +186,19 @@ const CreateProduct = () => {
                 />
               </div>
               <div className="mb-3">
-              <Select
-  bordered={false}
-  placeholder="Select Shipping"
-  size="large"
-  showSearch
-  className="form-select mb-3"
-  onChange={(value) => {
-    setShipping(value);
-  }}
->
-  <Select.Option value="0">No</Select.Option>
-  <Select.Option value="1">Yes</Select.Option>
-</Select>
-
+                <Select
+                  bordered={false}
+                  placeholder="Select Shipping"
+                  size="large"
+                  showSearch
+                  className="form-select mb-3"
+                  onChange={(value) => {
+                    setShipping(value);
+                  }}
+                >
+                  <Select.Option value="0">No</Select.Option>
+                  <Select.Option value="1">Yes</Select.Option>
+                </Select>
               </div>
               <div className="mb-3">
                 <button className="btn btn-primary" onClick={handleCreate}>
