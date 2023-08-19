@@ -4,6 +4,7 @@ import { useAuth } from "../../context/Auth";
 import toast from "react-hot-toast";
 import logo from "../../image/helmet.png";
 import "../../fonts/Lost_Treasure.otf";
+import SearchInput from "../forms/SearchInput";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -54,84 +55,85 @@ const Header = () => {
             </div>
             {/* <img className="H-logo" src={logo} alt="logo" /> */}
             <div className="header">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <NavLink
-                  to="/"
-                  className="nav-link" /* i have removed active from here . it is suppose to be (nav-link active) */
-                  aria-current="page"
-                  href="#"
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/category"
-                  className="nav-link" /* i have removed active from here . it is suppose to be (nav-link active) */
-                  aria-current="page"
-                  href="#"
-                >
-                  Category
-                </NavLink>
-              </li>
-              {!auth?.user ? (
-                <>
-                  <li className="nav-item">
-                    <NavLink to="/register" className="nav-link">
-                      Register
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink to="/login" className="nav-link">
-                      Login
-                    </NavLink>
-                  </li>
-                </>
-              ) : (
-                <>
-                  <li className="nav-item dropdown">
-                    <NavLink
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      {auth?.user?.name}
-                    </NavLink>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <NavLink
-                          to={`/dashboard/${
-                            auth?.user?.role === 1 ? "admin" : "user" // this condistion is to check either admin dashboard open or user dashboard ...
-                          }`}
-                          className="dropdown-item"
-                        >
-                          DashBoard
-                        </NavLink>
-                      </li>
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <SearchInput />
+                <li className="nav-item">
+                  <NavLink
+                    to="/"
+                    className="nav-link" /* i have removed active from here . it is suppose to be (nav-link active) */
+                    aria-current="page"
+                    href="#"
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/category"
+                    className="nav-link" /* i have removed active from here . it is suppose to be (nav-link active) */
+                    aria-current="page"
+                    href="#"
+                  >
+                    Category
+                  </NavLink>
+                </li>
+                {!auth?.user ? (
+                  <>
+                    <li className="nav-item">
+                      <NavLink to="/register" className="nav-link">
+                        Register
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink to="/login" className="nav-link">
+                        Login
+                      </NavLink>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li className="nav-item dropdown">
+                      <NavLink
+                        className="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        {auth?.user?.name}
+                      </NavLink>
+                      <ul className="dropdown-menu">
+                        <li>
+                          <NavLink
+                            to={`/dashboard/${
+                              auth?.user?.role === 1 ? "admin" : "user" // this condistion is to check either admin dashboard open or user dashboard ...
+                            }`}
+                            className="dropdown-item"
+                          >
+                            DashBoard
+                          </NavLink>
+                        </li>
 
-                      <li>
-                        <NavLink
-                          onClick={handleLogout}
-                          to="/login"
-                          className="dropdown-item"
-                        >
-                          Logout
-                        </NavLink>
-                      </li>
-                    </ul>
-                  </li>
-                </>
-              )}
-              <li className="nav-item">
-                <NavLink to="/cart" className="nav-link">
-                  Cart(0)
-                </NavLink>
-              </li>
-            </ul>
-          </div>
+                        <li>
+                          <NavLink
+                            onClick={handleLogout}
+                            to="/login"
+                            className="dropdown-item"
+                          >
+                            Logout
+                          </NavLink>
+                        </li>
+                      </ul>
+                    </li>
+                  </>
+                )}
+                <li className="nav-item">
+                  <NavLink to="/cart" className="nav-link">
+                    Cart(0)
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
