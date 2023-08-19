@@ -157,7 +157,8 @@ const HomePage = () => {
                     {p.description.substring(0, 45)}...
                   </p>
                   <p className="card-text">₹ {p.price}</p>
-                  <button className="btn btn-primary ms-2" onClick={()=>navigate(`/product/${p.slug}`)}>More Details</button>
+                  <button className="btn btn-primary ms-2" 
+                  onClick={()=>navigate(`/product/${p.slug}`)}>More Details</button>
                   <button className="btn btn-secondary ms-2">
                     Add to cart
                   </button>
