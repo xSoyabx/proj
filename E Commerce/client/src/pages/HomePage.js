@@ -4,9 +4,11 @@ import { useAuth } from "../context/Auth";
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
 import { prices } from "../components/prices";
-import styles from "../styles/productCard.css"
+import styles from "../styles/productCard.css";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [auth, setAuth] = useAuth();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -169,13 +171,17 @@ const HomePage = () => {
                   </div>
                 </div>
               ))}
+<<<<<<< HEAD
             </div> */}
 
           <div className="col-md-9 offset-1">
             <h1 className="text-center">All Products</h1>
             <div className="d-flex flex-wrap">
               {products?.map((p) => (
-                <div className={`card ${styles.searchResultsContainer}`} key={p._id}>
+                <div
+                  className={`card ${styles.searchResultsContainer}`}
+                  key={p._id}
+                >
                   <div className="product-image-container">
                     <img
                       className="product-image"
@@ -191,7 +197,12 @@ const HomePage = () => {
                     <p className="product-price">₹ {p.price}</p>
                   </div>
                   <div className="buttons-container">
-                    <button className="button">More Details</button>
+                    <button
+                      className="button"
+                      onClick={() => navigate(`/product/${p.slug}`)}
+                    >
+                      More Details
+                    </button>
                     <button className="button">Add to Cart</button>
                   </div>
                 </div>

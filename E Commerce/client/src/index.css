@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Libre+Baskerville&family=Nunito+Sans:opsz,wght@6..12,300&family=REM&family=Raleway:wght@300&family=Roboto+Slab&display=swap");
-
+@import url("//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css");
+@import "//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js";
+@import "//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js";
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -199,7 +201,18 @@ button.navbar-toggler{
 }
 
 /* Footer CSS  */
-.footer {
+
+.footer-widget p {
+    margin-bottom: 27px;
+}
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+  color:white;
+    line-height: 28px;
+}
+
+.container-footer {
   color: white;
   padding: 25px;
   /* gradient dark  */
@@ -212,16 +225,66 @@ button.navbar-toggler{
   background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
 }
 
-.footer a {
+/* .footer a {
   text-decoration: none;
   color: #a9a9a9;
   padding: 15px;
-}
+  
+  .footer a:hover {
+    color: rgb(250, 94, 94);
+  }
+} */
 
-.footer a:hover {
-  color: rgb(250, 94, 94);
-}
+/* .container-footer {
+  padding: 75px 0 0;
+  background-color: #151414;
+  position: relative;
+  z-index: 2; } */
 
+
+
+  .copyright {
+    padding: 28px 0;
+    background-color: #000000; }
+    .copyright span,
+    .copyright a {
+      color: #9f9f9f;
+      -webkit-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
+    .copyright a:hover {
+      color:#ff0000; }
+  
+  .copyright-menu ul {
+    text-align: right;
+    margin: 0; }
+  
+  .copyright-menu li {
+    display: inline-block;
+    padding-left: 20px; }
+  
+  .back-to-top {
+    position: relative;
+    z-index: 2; }
+    .back-to-top .btn-dark {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      padding: 0;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2e2e2e;
+      border-color: #2e2e2e;
+      display: none;
+      z-index: 999;
+      -webkit-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
+      .back-to-top .btn-dark:hover {
+        cursor: pointer;
+        background: #FA6742;
+        border-color: #FA6742; }
 /* =================================
 ======== page not found css ======= */
 .pnf {

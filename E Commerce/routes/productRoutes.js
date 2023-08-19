@@ -11,6 +11,7 @@ import {
   updateProductController,
   productListController,
   serachProductController,
+  relatedProductController,
 } from "../controllers/productController.js";
 import formidable from "express-formidable";
 const router = express.Router();
@@ -56,4 +57,6 @@ router.get("/product-list/:page",productListController)
 // serach product
 router.get('/search/:keyword',serachProductController)
 
+//similar product
+router.get("/related-product/:pid/:cid",relatedProductController)
 export default router;
