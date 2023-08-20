@@ -7,14 +7,14 @@ import "../../fonts/Lost_Treasure.otf";
 import SearchInput from "../forms/SearchInput";
 import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
-import {Badge} from 'antd'
+import { Badge } from "antd";
 
 import { FiAlignJustify } from "react-icons/fi";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [cart] = useCart();
-  const categories = useCategory()
+  const categories = useCategory();
   const handleLogout = () => {
     setAuth({
       ...auth,
@@ -166,12 +166,11 @@ const Header = () => {
                 )}
 
                 <li className="nav-item">
-                <Badge count={cart?.length} showZero>
-                <NavLink to="/cart" className="nav-link">
-                    Cart 
-                  </NavLink>
-    </Badge>
-                  
+                  <Badge count={cart?.length} showZero>
+                    <NavLink to="/cart" className="nav-link">
+                      Cart
+                    </NavLink>
+                  </Badge>
                 </li>
                 <SearchInput />
               </ul>
