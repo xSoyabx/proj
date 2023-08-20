@@ -2,7 +2,7 @@ import slugify from "slugify";
 import productModel from "../models/productModel.js";
 import fs from "fs";
 import exp from "constants";
-import categoryModel from "../models/categoryModel.js"
+import categoryModel from "../models/categoryModel.js";
 
 export const createProductController = async (req, res) => {
   try {
@@ -147,8 +147,16 @@ export const deleteProduct = async (req, res) => {
 
 export const updateProductController = async (req, res) => {
   try {
-    const { name, slug, description, price, category, quantity, shipping } =
-      req.fields;
+    const {
+      name,
+      slug,
+      description,
+      price,
+      category,
+      quantity,
+      shipping,
+      brand,
+    } = req.fields;
     const { photo } = req.files;
 
     //validation
@@ -159,6 +167,8 @@ export const updateProductController = async (req, res) => {
         return res.status(500).send({ error: "Description is required" });
       case !price:
         return res.status(500).send({ error: "Price is required" });
+      case !brand:
+        return res.status(500).send({ error: "Brand is required" });
       case !category:
         return res.status(500).send({ error: "Category is required" });
       case !quantity:
@@ -268,6 +278,7 @@ export const serachProductController = async (req, res) => {
         $or: [
           { name: { $regex: keyword, $options: "i" } },
           { description: { $regex: keyword, $options: "i" } },
+          { brand: { $regex: keyword, $options: "i" } },
         ],
       })
       .select("-photo");
@@ -282,45 +293,55 @@ export const serachProductController = async (req, res) => {
   }
 };
 
-
 //similar products
-export const relatedProductController = async(req,res)=>{
-  try{ 
-      const {pid,cid}=req.params
-      const products = await productModel.find({
-        category:cid,
-        _id:{$ne:pid}
-      }).select("-photo").limit(3).populate("category")
-      res.status(200).send({
-        success:true,
-        products,
+export const relatedProductController = async (req, res) => {
+  try {
+    const { pid, cid } = req.params;
+    const products = await productModel
+      .find({
+        category: cid,
+        _id: { $ne: pid },
       })
-  } catch(error){
-    console.log(error)
+      .select("-photo")
+      .limit(3)
+      .populate("category");
+    res.status(200).send({
+      success: true,
+      products,
+    });
+  } catch (error) {
+    console.log(error);
     res.status(400).send({
-      success:false,
-      message:"error while getting related product",
-      error
-    })
+      success: false,
+      message: "error while getting related product",
+      error,
+    });
   }
-}
+};
 
 //get product by category
+<<<<<<< HEAD
 export const productCategoryController=async(req,res)=>{
   try{
     const category = await categoryModel.findOne({slug:req.params.slug})
     const products=await productModel.find({category}).populate("category")
+=======
+export const productCategoryController = async (req, res) => {
+  try {
+    const category = await categoryModel.find({ slug: req.params.slug });
+    const product = await productModel.find({ category }).populate("category");
+>>>>>>> 803fe468773f6780b0dfadace6141bbea05d26ef
     res.status(200).send({
-      success:true,
+      success: true,
       category,
-      products
-    })
-  } catch(error){
-    console.log(error)
+      product,
+    });
+  } catch (error) {
+    console.log(error);
     res.status(400)({
-      success:false,
+      success: false,
       error,
-      message:"Error while getting product by category"
-    })
+      message: "Error while getting product by category",
+    });
   }
-}
+};
