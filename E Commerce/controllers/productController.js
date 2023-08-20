@@ -320,17 +320,10 @@ export const relatedProductController = async (req, res) => {
 };
 
 //get product by category
-<<<<<<< HEAD
 export const productCategoryController=async(req,res)=>{
   try{
     const category = await categoryModel.findOne({slug:req.params.slug})
     const products=await productModel.find({category}).populate("category")
-=======
-export const productCategoryController = async (req, res) => {
-  try {
-    const category = await categoryModel.find({ slug: req.params.slug });
-    const product = await productModel.find({ category }).populate("category");
->>>>>>> 803fe468773f6780b0dfadace6141bbea05d26ef
     res.status(200).send({
       success: true,
       category,
