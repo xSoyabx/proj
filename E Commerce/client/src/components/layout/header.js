@@ -2,18 +2,19 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../../context/Auth";
 import toast from "react-hot-toast";
-// import logo from "../../image/helmet.png";
+import logo from "../../image/helmet.png";
 import "../../fonts/Lost_Treasure.otf";
 import SearchInput from "../forms/SearchInput";
 import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
-import {Badge} from 'antd'
+import { Badge } from "antd";
 
+import { FiAlignJustify } from "react-icons/fi";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [cart] = useCart();
-  const categories = useCategory()
+  const categories = useCategory();
   const handleLogout = () => {
     setAuth({
       ...auth,
@@ -28,6 +29,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
           <button
+            style={{ color: "white" }}
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -36,12 +38,24 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon" />
+            <FiAlignJustify />
           </button>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            {/* <div className="logo">
-              <img className="H-logo" src={logo} alt="logo" />
-            </div> */}
+          <div
+            className="collapse navbar-collapse justify-content-center"
+            id="navbarTogglerDemo01"
+          >
+            {/* <div className="justify-content-center"> */}
+            {/* Display logo photo only for screen size larger than 767px */}
+            <div className="logo">
+              <img
+                className="H-logo"
+                src={logo}
+                alt="logo"
+                style={{
+                  display: window.innerWidth > 767 ? "block" : "none",
+                }}
+              />
+            </div>
             <div>
               <NavLink to="/" style={{ textDecoration: "none" }}>
                 <span
@@ -59,10 +73,10 @@ const Header = () => {
                 </span>
               </NavLink>
             </div>
+            {/* </div> */}
             {/* <img className="H-logo" src={logo} alt="logo" /> */}
-            <div className="header">
+            <div className="header ">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                <SearchInput />
                 <li className="nav-item">
                   <NavLink
                     to="/"
@@ -73,32 +87,32 @@ const Header = () => {
                     Home
                   </NavLink>
                 </li>
-             <li className="nav-item dropdown">
-  <Link className="nav-link dropdown-toggle"
-   to={"/categories"}  
-   data-bs-toggle="dropdown" 
-   >
-    Categories
-  </Link>
-  <ul className="dropdown-menu">
-    <li>
-    <Link className="dropdown-item" 
-            to={"/categories"}  >
-            All Categories
-            </Link>
-    </li>
-  {categories?.map((c)=>(
-          <li>
-            
-            <Link className="dropdown-item" 
-            to={`/category/${c.slug}`}>
-            {c.name}
-            </Link>
-            </li>
-        
-  ))}
-  </ul>
-</li>
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle"
+                    to={"/categories"}
+                    data-bs-toggle="dropdown"
+                  >
+                    Categories
+                  </Link>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item" to={"/categories"}>
+                        All Categories
+                      </Link>
+                    </li>
+                    {categories?.map((c) => (
+                      <li>
+                        <Link
+                          className="dropdown-item"
+                          to={`/category/${c.slug}`}
+                        >
+                          {c.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
 
                 {!auth?.user ? (
                   <>
@@ -150,14 +164,15 @@ const Header = () => {
                     </li>
                   </>
                 )}
+
                 <li className="nav-item">
-                <Badge count={cart?.length} showZero>
-                <NavLink to="/cart" className="nav-link">
-                    Cart 
-                  </NavLink>
-    </Badge>
-                  
+                  <Badge count={cart?.length} showZero>
+                    <NavLink to="/cart" className="nav-link">
+                      Cart
+                    </NavLink>
+                  </Badge>
                 </li>
+                <SearchInput />
               </ul>
             </div>
           </div>
