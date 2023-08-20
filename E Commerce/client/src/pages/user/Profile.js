@@ -5,6 +5,7 @@ import Layout from '../../components/layout/layout';
 import axios from "axios";
 import { toast } from 'react-hot-toast';
 
+
 const Profile = () => {
   //context
  const [auth,setAuth]=useAuth()
@@ -23,10 +24,12 @@ const Profile = () => {
     setEmail(email)
     setPhone(phone)
   },[auth?.user])
+
+  //form function
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/v1/auth/register", {
+      const {data} = await axios.put("/api/v1/auth/profile", {
         name,
         email,
         password,
@@ -34,7 +37,17 @@ const Profile = () => {
         address,
        
       });
-     
+     if((data?.error))
+    {
+      toast.error("data?.error")
+    }else{
+      setAuth({...auth, user:data?.updatedUser})
+      let ls = localStorage.getItem("auth")
+      ls=JSON.parse(ls)
+      ls.user = data.updatedUser
+      localStorage.setItem("auth",JSON.stringify(ls))
+      toast.success("Profile Updated Successfully")
+    }
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
@@ -78,9 +91,9 @@ const Profile = () => {
                       className="form-control"
                       id="exampleInputEmail1"
                       placeholder="Enter Your Name"
-                      required
+                      
                       autoFocus
-                      autocomplete="off"
+                      autoComplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -91,8 +104,9 @@ const Profile = () => {
                       className="form-control"
                       id="exampleInputEmail1"
                       placeholder="Enter Your Email "
-                      required
-                      autocomplete="off"
+                      
+                      autoComplete="off"
+                      disabled
                     />
                   </div>
                   <div className="inputBox">
@@ -103,8 +117,8 @@ const Profile = () => {
                       className="form-control"
                       id="exampleInputPassword1"
                       placeholder="Enter Your Password"
-                      required
-                      autocomplete="off"
+                      
+                      autoComplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -115,8 +129,8 @@ const Profile = () => {
                       className="form-control"
                       id="exampleInputEmail1"
                       placeholder="Enter Your Phone"
-                      required
-                      autocomplete="off"
+                      
+                      autoComplete="off"
                     />
                   </div>
                   <div className="inputBox">
@@ -127,12 +141,12 @@ const Profile = () => {
                       className="form-control"
                       id="exampleInputEmail1"
                       placeholder="Enter Your Address"
-                      required
-                      autocomplete="off"
+                      
+                      autoComplete="off"
                     />
                   </div>
 
-                  <div class="inputBox">
+                  <div className="inputBox">
                     <input type="submit" value="UPDATE" />
                   </div>
                   {/* <button className="inputBox-button" type="submit">
