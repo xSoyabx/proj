@@ -220,11 +220,18 @@ button.navbar-toggler {
 
 /* Footer CSS  */
 
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px;
+  }
+}
+
 p {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   color: white;
   line-height: 28px;
+  padding-left: 60px;
 }
 
 .container-footer {
@@ -240,7 +247,7 @@ p {
   background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
 }
 
-/* .footer a {
+ .link a {
   text-decoration: none;
   color: #a9a9a9;
   padding: 15px;
@@ -248,38 +255,42 @@ p {
   .footer a:hover {
     color: rgb(250, 94, 94);
   }
-} */
-
-/* .container-footer {
-  padding: 75px 0 0;
-  background-color: #151414;
-  position: relative;
-  z-index: 2; } */
-
+} 
 .copyright {
   padding: 28px 20px;
   background-color: #000000;
 }
-.copyright span,
-.copyright a {
+.footer-menu a {
   color: #9f9f9f;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-.copyright a:hover {
-  color: #ff0000;
-}
-
-.copyright-menu ul {
+.footer-menu ul {
   text-align: right;
   margin: 0;
 }
 
-.copyright-menu li {
-  display: inline-block;
+.footer-social-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.footer-menu li {
+  display:grid;
   padding-left: 20px;
 }
+.copyright span
+{
+  color: #9f9f9f;
+}
+.footer-menu a:hover {
+  color: #ff0000;
+}
+
 #BiSolidUpArrow {
   padding-bottom: 20px;
 }
@@ -355,6 +366,9 @@ p {
 .social-link {
   color: black;
   text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 .facebook:hover {
   color: blue;
