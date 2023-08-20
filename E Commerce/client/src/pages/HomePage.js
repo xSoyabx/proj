@@ -6,9 +6,12 @@ import { Checkbox, Radio } from "antd";
 import { prices } from "../components/prices";
 import styles from "../styles/productCard.css";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/cart";
+import { toast } from "react-hot-toast";
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const [cart, setCart] = useCart();
   const [auth, setAuth] = useAuth();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -201,9 +204,13 @@ const HomePage = () => {
                       className="button"
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
-                      More Details
+                      More Details 
                     </button>
-                    <button className="button">Add to Cart</button>
+                    <button className="button" onClick={()=>{
+                      setCart([...cart,p])
+                      localStorage.setItem("cart",JSON.stringify([...cart,p]))
+                      toast.success("Product Added To Cart")
+                    }}>Add to Cart</button>
                   </div>
                 </div>
               ))}
