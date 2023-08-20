@@ -90,3 +90,31 @@
 .button:hover {
   background-color: #ff8a50;
 }
+
+.product-name-h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #242020;
+}
+
+.product-description-h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #242020;
+}
+.product-qty-h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #242020;
+}
+.product-brand-h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #242020;
+}
+
+.product-price-h4 {
+  color: #ff5722;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}

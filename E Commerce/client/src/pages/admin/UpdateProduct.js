@@ -32,7 +32,6 @@ const UpdateProduct = () => {
       setId(data.product._id);
       setDescription(data.product.description);
       setPrice(data.product.price);
-      setPrice(data.product.price);
       setQuantity(data.product.quantity);
       setShipping(data.product.shipping);
       setCategory(data.product.category._id);
@@ -67,6 +66,7 @@ const UpdateProduct = () => {
     try {
       const productData = new FormData();
       productData.append("name", name);
+      productData.append("brand", brand);
       productData.append("description", description);
       productData.append("price", price);
       productData.append("quantity", quantity);

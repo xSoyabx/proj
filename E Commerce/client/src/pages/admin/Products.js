@@ -61,7 +61,7 @@ import Layout from "./../../components/layout/layout";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
-import styles from "../../styles/productCard.css"
+import styles from "../../styles/productCard.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -123,11 +123,21 @@ const Products = () => {
                       />
                     </div>
                     <div className="product-details">
-                      <h3 className="product-name">{p.name}</h3>
-                      <p className="product-description">
-                        {p.description}
-                      </p>
-                      <p className="product-price">₹ {p.price}</p>
+                      <h4 className="product-brand-h4">
+                        <b>Brand :</b> {p.brand}
+                      </h4>
+                      <h4 className="product-name-h4">
+                        <b>Name :</b> {p.name}
+                      </h4>
+                      <h4 className="product-description-h4">
+                        <b>Desc :</b> {p.description}
+                      </h4>
+                      <h4 className="product-qty-h4">
+                        <b>Qty :</b> {p.quantity}
+                      </h4>
+                      <h4 className="product-price-h4">
+                        <b>Price :</b> ₹ {p.price}
+                      </h4>
                     </div>
                   </div>
                 </Link>
