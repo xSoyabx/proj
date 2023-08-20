@@ -143,7 +143,7 @@ section .color {
 }
 .form .inputBox input {
   width: 100%;
-  background: rgba(241, 83, 83, 0.903);
+  background: #f15353e6;
   border: none;
   outline: none;
   padding: 10px 20px;
@@ -159,6 +159,12 @@ section .color {
 .form .inputBox input::placeholder {
   color: #fff;
 }
+.form .inputBox input:disabled {
+background-color: #fe0707;
+color: #131212;
+font-weight: 600;
+}
+
 .form .inputBox input[type="submit"] {
   background: #fff;
   color: #f15353e6;

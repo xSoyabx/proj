@@ -2,7 +2,6 @@ import { comparePassword, hashPassword } from "../helpers/authHelper.js";
 import userModel from "../models/userModel.js";
 import JWT from "jsonwebtoken";
 
-
 export const registerController = async (req, res) => {
   try {
     const { name, email, password, phone, address, answer } = req.body;
@@ -155,43 +154,96 @@ export const forgetPasswordController = async (req, res) => {
 
 //test controller
 export const testController = (req, res) => {
-  try{
-res.send("Protected Routes")
-  } catch(error){
-    console.log(error)
-    res.send({error})
+  try {
+    res.send("Protected Routes");
+  } catch (error) {
+    console.log(error);
+    res.send({ error });
   }
 };
 
 //update profile
-export const updateProfileController = async(req,res)=>{
-  try{
-const {name,email,password,address,phone}=req.body
-const user=await userModel.findById(req.user._id)
+// export const updateProfileController = async (req, res) => {
+//   try {
+//     const { name, email, password, address, phone } = req.body;
+//     const user = await userModel.findById(req.user._id);
 
-//password
-if(password && password.length<6){
-  return res.json({error:"Password is required and should of more than 5 characters"})
-}
-const hashedPassword = password ? await hashPassword(password):undefined
-const updatedUser=await userModel.findByIdAndUpdate(req.user._id,{
-  name:name || user.name,
-  password: hashedPassword|| user.password,
-  phone:phone || user.phone,
-  address:address || user.address
-},{new : true})
-res.status(200).send({
-  success:true,
-  message:"Profile Updated",
-  updatedUser
-})
-  } catch (error)
-  {
-    console.log(error)
-    res.status(400).send({
-      success:false,
-      message:"Error while updating user profile",
-      error
-    })
+//     //password
+//     if (password && password.length <= 8) {
+//       return res.json({
+//         error:
+//           "Password is required and should of more than or equal to 8 characters",
+//       });
+//     }
+//     const hashedPassword = password ? await hashPassword(password) : undefined;
+//     const updatedUser = await userModel.findByIdAndUpdate(
+//       req.user._id,
+//       {
+//         name: name || user.name,
+//         password: hashedPassword || user.password,
+//         phone: phone || user.phone,
+//         address: address || user.address,
+//       },
+//       { new: true }
+//     );
+//     res.status(200).json({
+//       success: true,
+//       message: "Profile Updated",
+//       updatedUser,
+//     });
+//   } catch (error) {
+//     console.log(error);
+//     res.status(400).send({
+//       success: false,
+//       message: "Error while updating user profile",
+//       error,
+//     });
+//   }
+// };
+
+
+export const updateProfileController = async (req, res) => {
+  try {
+    const { name, email, password, address, phone } = req.body;
+    const user = await userModel.findById(req.user._id);
+
+    // Password
+    let hashedPassword;
+    if (password) {
+      if (password.length < 8) {
+        return res.status(400).json({
+          success: false,
+          message: "Password should be at least 8 characters long",
+        });
+      }
+      hashedPassword = await hashPassword(password);
+    }
+
+    // Update user data if provided
+    const updatedUserData = {
+      name: name || user.name,
+      password: hashedPassword || user.password,
+      phone: phone || user.phone,
+      address: address || user.address,
+    };
+
+    const updatedUser = await userModel.findByIdAndUpdate(
+      req.user._id,
+      updatedUserData,
+      { new: true }
+    );
+
+    res.status(200).json({
+      success: true,
+      message: "Profile Updated",
+      updatedUser,
+    });
+  } catch (error) {
+    console.error("Error while updating user profile:", error.message);
+    res.status(400).json({
+      success: false,
+      message: "Error while updating user profile",
+      error: error.message,
+    });
   }
-}
+};
