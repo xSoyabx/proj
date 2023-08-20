@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 // import"//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js";
 // import "cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js";
 import Policy from "./../../pages/Policy";
+import {BiSolidUpArrow} from "react-icons/bi";
 
 const Footer = () => {
   return (
@@ -16,10 +17,9 @@ const Footer = () => {
                     className="footer-logo"
                     style={{
                       color: "Red",
-                      fontSize: "23px",
+                      fontSize: "29px",
                       fontFamily: "lost-treasure",
                       cursor: "pointer",
-                      marginRight: "30px",
                       marginLeft: "20px",
                     }}
                   >
@@ -100,10 +100,11 @@ const Footer = () => {
           title="Back to Top"
           style={{ display: "block" }}
         >
-          <i className="fa fa-angle-up"></i>
+          <BiSolidUpArrow/>
         </button>
       </div>
     </div>
+    
   );
 };
 
