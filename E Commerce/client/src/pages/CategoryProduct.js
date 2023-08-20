@@ -1,48 +1,39 @@
-import React,{useState,useEffect} from 'react'
-import Layout from './../components/layout/layout';
+import React, { useState, useEffect } from "react";
+import Layout from "./../components/layout/layout";
 import axios from "axios";
-import { useParams,useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from "react-router-dom";
 import "../styles/productCard.css";
 const CategoryProduct = () => {
-  const params=useParams()
-  const navigate = useNavigate()
-  const [products,setProducts]=useState([])
-  const [category,setCategory]=useState([])
+  const params = useParams();
+  const navigate = useNavigate();
+  const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState([]);
 
-  useEffect(()=>{
-      if(params?.slug) getProductsByCat()
-  },[params?.slug])
-  const getProductsByCat = async()=>{
-    try{
-      const {data} = await axios.get(
+  useEffect(() => {
+    if (params?.slug) getProductsByCat();
+  }, [params?.slug]);
+  const getProductsByCat = async () => {
+    try {
+      const { data } = await axios.get(
         `/api/v1/product/product-category/${params.slug}`
-        )
-      setProducts(data?.products)
-      setCategory(data?.category)
-    } catch(error){
-      console.log(error)
+      );
+      setProducts(data?.products);
+      setCategory(data?.category);
+    } catch (error) {
+      console.log(error);
     }
-  }
+  };
   return (
     <Layout>
-      <div className='container mt-3'>
-        <h4 className='text-center'>
-          Category - {category?.name}
-        </h4>
-        </div>
-        <div>
-        <h6 className='text-center'>
-          {products?.length} Result Found
-          </h6>
-          <div className='row'>
+      <div className="container mt-3">
+        <h4 className="text-center">Category - {category?.name}</h4>
+
+        <h6 className="text-center">{products?.length} Result Found</h6>
+        <div className="row">
           <div className="col-md-9 offset-1">
-            
             <div className="d-flex flex-wrap">
               {products?.map((p) => (
-                <div
-                  className={"card-1"}
-                  key={p._id}
-                >
+                <div className={"card-1"} key={p._id}>
                   <div className="product-image-container">
                     <img
                       className="product-image"
@@ -85,12 +76,9 @@ const CategoryProduct = () => {
             </div> */}
           </div>
         </div>
-          </div>
-        
-          
-      
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default CategoryProduct
+export default CategoryProduct;
