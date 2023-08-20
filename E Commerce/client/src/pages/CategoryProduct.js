@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Layout from './../components/layout/layout';
 import axios from "axios";
 import { useParams,useNavigate } from 'react-router-dom';
-import styles from "../styles/productCard.css";
+import "../styles/productCard.css";
 const CategoryProduct = () => {
   const params=useParams()
   const navigate = useNavigate()
@@ -40,7 +40,7 @@ const CategoryProduct = () => {
             <div className="d-flex flex-wrap">
               {products?.map((p) => (
                 <div
-                  className={`card ${styles.searchResultsContainer}`}
+                  className={"card-1"}
                   key={p._id}
                 >
                   <div className="product-image-container">

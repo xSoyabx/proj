@@ -105,7 +105,7 @@ const ForgetPassword = () => {
             <div className="square" style={{ "--i": 2 }}></div>
             <div className="square" style={{ "--i": 3 }}></div>
             <div className="square" style={{ "--i": 4 }}></div>
-            <div className="container ">
+            <div className="container-1 ">
               <div className="form">
                 <h2 className="title">Forget Password</h2>
 

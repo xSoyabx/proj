@@ -1,13 +1,13 @@
 import Layout from "../components/layout/layout";
 import React from "react";
 import { useSearch } from "../context/search";
-import styles from "../styles/productCard.css";
+import "../styles/productCard.css";
 
 const Search = () => {
   const [values, setValues] = useSearch();
   return (
     <Layout title={"Search Results"}>
-      <div className={`container${styles.searchResultsContainer}`}>
+      <div className={"container"}>
         <div>
           <div className="text-center mt-3">
             <h1>Search Resuts</h1>
@@ -19,7 +19,7 @@ const Search = () => {
           </div>
           <div className="d-flex flex-wrap justify-content-around">
             {values?.results.map((p) => (
-              <div className="card" key={p._id}>
+              <div className="card-1" key={p._id}>
                 <div className="product-image-container">
                   <img
                     className="product-image"

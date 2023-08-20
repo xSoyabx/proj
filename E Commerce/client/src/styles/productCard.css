@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-.card {
+.card-1 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold; /* Set font weight to bold */
   border: 1px solid black;
@@ -14,7 +14,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.card-1:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }

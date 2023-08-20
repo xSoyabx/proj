@@ -303,7 +303,7 @@ export const relatedProductController = async (req, res) => {
         _id: { $ne: pid },
       })
       .select("-photo")
-      .limit(3)
+      .limit(6)
       .populate("category");
     res.status(200).send({
       success: true,
@@ -331,7 +331,7 @@ export const productCategoryController=async(req,res)=>{
     });
   } catch (error) {
     console.log(error);
-    res.status(400)({
+    res.status(400).send({
       success: false,
       error,
       message: "Error while getting product by category",

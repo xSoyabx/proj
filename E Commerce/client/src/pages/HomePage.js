@@ -4,7 +4,7 @@ import { useAuth } from "../context/Auth";
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
 import { prices } from "../components/prices";
-import styles from "../styles/productCard.css";
+import "../styles/productCard.css";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
@@ -182,7 +182,7 @@ const HomePage = () => {
             <div className="d-flex flex-wrap">
               {products?.map((p) => (
                 <div
-                  className={`card ${styles.searchResultsContainer}`}
+                  className={"card-1"}
                   key={p._id}
                 >
                   <div className="product-image-container">

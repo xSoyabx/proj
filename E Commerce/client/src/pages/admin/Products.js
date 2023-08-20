@@ -61,7 +61,7 @@ import Layout from "./../../components/layout/layout";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
-import styles from "../../styles/productCard.css";
+import "../../styles/productCard.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -112,7 +112,7 @@ const Products = () => {
                   </div> */}
 
                   <div
-                    className={`card ${styles.searchResultsContainer}`}
+                    className="card-1"
                     key={p._id}
                   >
                     <div className="product-image-container">
