@@ -178,6 +178,13 @@ section .color {
   margin-top: 5px;
   color: #fff;
 }
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 28px;
+  padding-left: 5px;
+}
 .forget a {
   color: #fff;
   font-weight: 600;
