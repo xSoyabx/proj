@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 import Policy from "./../../pages/Policy";
 import { BiMailSend, BiPhoneCall, BiSupport } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { BiSolidUpArrow } from "react-icons/bi";
 import "../../styles/footer.css";
@@ -161,45 +161,44 @@ const Footer = () => {
           <div className="footer-social-link">
             <h3>Follow us</h3>
             <ul className="ul-1">
-              <li>
+              <li className="li-1">
                 <Link
                   className="li-1 footer-social-link facebook"
                   to="https://www.facebook.com/HelmetMusic/"
                 >
-                  <FaFacebook /> : Facebook
+                  <FaFacebookF/> 
                 </Link>
               </li>
-              <li>
+              <li className="li-1">
                 <Link
                   className="li-1 footer-social-link instagram"
                   to="https://www.instagram.com/helmets_for_india/?hl=en"
                 >
-                  <FaInstagram /> : Instagram
+                  <FaInstagram /> 
                 </Link>
-                <li>
+              </li>
+              <li className="li-1">
                   <Link
                     className="li-1 footer-social-link whatsapp"
                     to="Whatsapp"
                   >
-                    <FaWhatsapp /> : Whatsapp
+                    <FaWhatsapp /> 
                   </Link>
-                </li>
-                <li className="li-1">
+              </li>
+            </ul>
+            <ul className="ul-2">
+                <li className="li-2">
                   <BiMailSend /> : dummy@email.com
                 </li>
-                <li className="li-1">
+                <li className="li-2">
                   <BiPhoneCall /> : 012-3456789
                 </li>
-                <li className="li-1">
-                  <BiSupport /> : 1800-0000-0000 (toll free)
-                </li>
-              </li>
             </ul>
           </div>
         </div>
         <div id="item-3">
           <div className="footer-menu">
-            <h3>USEFUL LINKS</h3>
+            <h2>USEFUL LINKS</h2>
             <ul>
               <li>
                 <NavLink to="/" className="nav-link" aria-current="page">
@@ -243,6 +242,15 @@ const Footer = () => {
           <span>Copyright © 2019, All Right Reserved Seobin</span>
         </div>
       </div>
+      <div id="back-to-top" className="back-to-top">
+             <button
+               className="btn btn-dark"
+               title="Back to Top"
+               style={{ display: "block" }}
+             >
+               <BiSolidUpArrow />
+             </button>
+           </div>
     </div>
   );
 };
