@@ -362,15 +362,7 @@ button.navbar-toggler {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-.facebook:hover {
-  color: blue;
-}
-.instagram:hover {
-  color: rgba(232, 20, 144, 0.945);
-}
-.whatsapp:hover {
-  color: green;
-}
+
 
 .c-text {
   font-family: "Nunito Sans", sans-serif;

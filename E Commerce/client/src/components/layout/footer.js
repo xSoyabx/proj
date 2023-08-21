@@ -3,8 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 // import "//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css";
 // import"//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js";
 // import "cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js";
-import Policy from "./../../pages/Policy";
-import { BiMailSend, BiPhoneCall, BiSupport } from "react-icons/bi";
+
+import { BiMailSend, BiPhoneCall } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
@@ -166,7 +166,7 @@ const Footer = () => {
                   className="li-1 footer-social-link facebook"
                   to="https://www.facebook.com/HelmetMusic/"
                 >
-                  <FaFacebookF/> 
+                  <FaFacebookF size={"22px"} />
                 </Link>
               </li>
               <li className="li-1">
@@ -174,25 +174,25 @@ const Footer = () => {
                   className="li-1 footer-social-link instagram"
                   to="https://www.instagram.com/helmets_for_india/?hl=en"
                 >
-                  <FaInstagram /> 
+                  <FaInstagram size={"22px"} />
                 </Link>
               </li>
               <li className="li-1">
-                  <Link
-                    className="li-1 footer-social-link whatsapp"
-                    to="Whatsapp"
-                  >
-                    <FaWhatsapp /> 
-                  </Link>
+                <Link
+                  className="li-1 footer-social-link whatsapp"
+                  to="Whatsapp"
+                >
+                  <FaWhatsapp size={"22px"} />
+                </Link>
               </li>
             </ul>
             <ul className="ul-2">
-                <li className="li-2">
-                  <BiMailSend /> : dummy@email.com
-                </li>
-                <li className="li-2">
-                  <BiPhoneCall /> : 012-3456789
-                </li>
+              <li className="li-2">
+                <BiMailSend /> : dummy@email.com
+              </li>
+              <li className="li-2">
+                <BiPhoneCall /> : 012-3456789
+              </li>
             </ul>
           </div>
         </div>
@@ -226,6 +226,7 @@ const Footer = () => {
         </div>
         <div id="item-4">
           <iframe
+          title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.676014414946!2d77.1250143752211!3d28.729226875612085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d016a4902905d%3A0xe26f6b10a8901011!2sROHINI%20Helmets!5e0!3m2!1sen!2sin!4v1692607916253!5m2!1sen!2sin"
             width="100%"
             height="100%"
@@ -243,14 +244,14 @@ const Footer = () => {
         </div>
       </div>
       <div id="back-to-top" className="back-to-top">
-             <button
-               className="btn btn-dark"
-               title="Back to Top"
-               style={{ display: "block" }}
-             >
-               <BiSolidUpArrow />
-             </button>
-           </div>
+        <button
+          className="btn btn-dark"
+          title="Back to Top"
+          style={{ display: "block" }}
+        >
+          <BiSolidUpArrow />
+        </button>
+      </div>
     </div>
   );
 };

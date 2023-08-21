@@ -113,6 +113,18 @@ ul{
   color: white;
   line-height: 28px;
 }
+
+.facebook:hover {
+  color: blue;
+}
+.instagram:hover {
+  color: rgba(232, 20, 144, 0.945);
+}
+.whatsapp:hover {
+  color: green;
+}
+
+
 /* Responsive styles */
 @media (max-width: 767px) {
   .center-content {
