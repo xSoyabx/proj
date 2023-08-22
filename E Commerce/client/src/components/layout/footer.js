@@ -221,6 +221,10 @@ const Footer = () => {
                 </NavLink>
               </li>
             </ul>
+            <form>
+          <input type="email" id="emailInput" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
             {/* FORM KA INPUT TYPE */}
           </div>
         </div>

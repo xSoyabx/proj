@@ -23,7 +23,7 @@ const Contact = () => {
     <Layout title={"Contact us"}>
       <div className="row contactus ">
         <div className="col-md-6 ">
-          <img
+          <img className="displayed"
             src="/images/contact-1.jpg"
             alt="contact-us"
             x
@@ -31,7 +31,7 @@ const Contact = () => {
           />
         </div>
         <div className="col-md-4">
-          <h1 className="c-text bg-dark p-2 text-white text-center">
+          <h1 className="h1-back">
             CONTACT US
           </h1>
           <p className="text-justify mt-2">
@@ -64,9 +64,6 @@ const Contact = () => {
           </p>
           <p className="mt-3">
             <BiPhoneCall /> : 012-3456789
-          </p>
-          <p className="mt-3">
-            <BiSupport /> : 1800-0000-0000 (toll free)
           </p>
         </div>
       </div>
