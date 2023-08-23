@@ -16,8 +16,8 @@
   align-items: center;
   background-color: #000000;
   margin-left: 30px;
-  border-left: 2px solid #818181;
-  border-right: 2px solid #818181;
+  border-left: 2px solid #202020;
+  border-right: 2px solid #202020;
   grid-row: 1 / 2;
   grid-column: 1 / 4;
 }
@@ -25,17 +25,17 @@
   
   background-color: #000000;
   margin-left: 30px;
-  border-left: 2px solid #818181;
-  border-right: 2px solid #818181;
+  border-left: 2px solid #202020;
+  border-right: 2px solid #202020;
   grid-row: 2 / 3;
   grid-column: 1 / 4;
 }
 #item-2 {
   background-color: #000000;
   margin-left: 30px;
-  border-left: 2px solid #818181;
-  border-right: 2px solid #818181;
-  border-bottom: 2px solid #818181;
+  border-left: 2px solid #202020;
+  border-right: 2px solid #202020;
+  border-bottom: 2px solid #202020;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   height: 95%;
