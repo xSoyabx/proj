@@ -1,14 +1,11 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-// import "//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css";
-// import"//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js";
-// import "cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js";
-
 import { BiMailSend, BiPhoneCall } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
-import { BiSolidUpArrow } from "react-icons/bi";
+import ScrollButton from "../forms/ScrollButton";
+import {} from "antd";
 import "../../styles/footer.css";
 
 const Footer = () => {
@@ -247,15 +244,7 @@ const Footer = () => {
           <span>Copyright © 2019, All Right Reserved Seobin</span>
         </div>
       </div>
-      <div id="back-to-top" className="back-to-top">
-        <button
-          className="btn btn-dark"
-          title="Back to Top"
-          style={{ display: "block" }}
-        >
-          <BiSolidUpArrow />
-        </button>
-      </div>
+      <ScrollButton/>
     </div>
   );
 };

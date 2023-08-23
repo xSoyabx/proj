@@ -208,6 +208,10 @@ button.navbar-toggler {
   }
 }
 
+  .SearchInput {
+    size: 50px;
+}
+
 /* helmet logo CSS */
 .H-logo {
   /* border: 1px solid green; */

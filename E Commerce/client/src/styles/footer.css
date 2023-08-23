@@ -1,7 +1,7 @@
 .angry-grid {
   display: grid;
 
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template: 1fr 0fr  / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
   gap: 0px;
   height: 100%;
@@ -46,7 +46,7 @@
   grid-row: 3 / 4;
   grid-column: 1 / 4;
 }
- h3{
+.footer-social-link h3{
   display: flex;
   color: #88ff00;
   justify-content: center;
@@ -68,7 +68,8 @@
 #item-3 {
   background-color: transparent;
   font-size: 20px;
-  padding-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -77,7 +78,7 @@
   grid-column: 4 / 7;
 }
 
-h2{
+.footer-menu h2{
   border-bottom: 2px solid #0099ff; /* Adjust the thickness and color as needed */
 }
 .nav-link{
@@ -234,36 +235,4 @@ button:hover {
 
 .footer-menu a:hover {
   color: #00f7ff;
-}
-
-#BiSolidUpArrow {
-  padding-bottom: 20px;
-}
-
-.back-to-top {
-  position: relative;
-  z-index: 2;
-}
-.back-to-top .btn-dark {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  padding: 5px;
-  position: fixed;
-  bottom: 70px;
-  right: 20px;
-  background: #013699;
-  border-color: #2b2b2b;
-  border: 2px;
-  border-radius: 10px;
-  display: none;
-  z-index: 999;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-.back-to-top .btn-dark:hover {
-  cursor: pointer;
-  background: #0058fb;
-  border-color: #000000;
 }
