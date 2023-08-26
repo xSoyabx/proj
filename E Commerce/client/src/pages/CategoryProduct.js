@@ -30,7 +30,7 @@ const CategoryProduct = () => {
 
         <h6 className="text-center">{products?.length} Result Found</h6>
         <div className="row">
-          <div className="col-md-9 offset-1">
+          <div className="col-md-12 offset-1">
             <div className="d-flex flex-wrap">
               {products?.map((p) => (
                 <div className={"card-1"} key={p._id}>
@@ -44,7 +44,8 @@ const CategoryProduct = () => {
                   <div className="product-details">
                     <h3 className="product-name">{p.name}</h3>
                     <p className="product-description">
-                      {p.description.substring(0, 30)}...
+                      {p.description}
+                      {/* {p.description.substring(0, 30)}... */}
                     </p>
                     <p className="product-price">₹ {p.price}</p>
                   </div>

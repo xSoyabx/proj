@@ -198,36 +198,48 @@ const Footer = () => {
             <h2>USEFUL LINKS</h2>
             <ul>
               <li>
-                <NavLink to="/" className="nav-link" aria-current="page">
+                <NavLink to="/" className="nav-link-1" aria-current="page">
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="#" className="nav-link" aria-current="page">
+                <NavLink to="#" className="nav-link-1" aria-current="page">
                   Terms
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/policy" className="nav-link" aria-current="page">
+                <NavLink
+                  to="/policy"
+                  className="nav-link-1"
+                  aria-current="page"
+                >
                   Privacy Policy
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className="nav-link" aria-current="page">
+                <NavLink
+                  to="/contact"
+                  className="nav-link-1"
+                  aria-current="page"
+                >
                   Contact
                 </NavLink>
               </li>
             </ul>
             <form>
-          <input type="email" id="emailInput" placeholder="Enter your email" />
-          <button type="submit">Subscribe</button>
-        </form>
+              <input
+                type="email"
+                id="emailInput"
+                placeholder="Enter your email"
+              />
+              <button type="submit">Subscribe</button>
+            </form>
             {/* FORM KA INPUT TYPE */}
           </div>
         </div>
         <div id="item-4">
           <iframe
-          title="map"
+            title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.676014414946!2d77.1250143752211!3d28.729226875612085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d016a4902905d%3A0xe26f6b10a8901011!2sROHINI%20Helmets!5e0!3m2!1sen!2sin!4v1692607916253!5m2!1sen!2sin"
             width="100%"
             height="100%"
@@ -244,7 +256,7 @@ const Footer = () => {
           <span>Copyright © 2019, All Right Reserved Seobin</span>
         </div>
       </div>
-      <ScrollButton/>
+      <ScrollButton />
     </div>
   );
 };

@@ -8,6 +8,7 @@ import "../styles/productCard.css";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
+import "../styles/filters.css";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -114,7 +115,7 @@ const HomePage = () => {
         <div className="row mt-2">
           <div className="col-md-2">
             {/* category filter  */}
-            <h4 className="text-center">Filter by category</h4>
+            {/* <h4 className="text-center">Filter by category</h4>
             <div className="d-flex flex-column">
               {categories?.map((c) => (
                 <Checkbox
@@ -124,19 +125,54 @@ const HomePage = () => {
                   {c.name}
                 </Checkbox>
               ))}
-            </div>
+            </div> */}
 
             {/* price filter */}
-            <h4 className="text-center mt-4">Filter by price</h4>
-            <div className="d-flex flex-column">
-              <Radio.Group onChange={(e) => setRadio(e.target.value)}>
-                {prices?.map((p) => (
-                  <div key={p._id}>
-                    <Radio value={p.array}>{p.name}</Radio>
-                  </div>
-                ))}
-              </Radio.Group>
+            {/* <div className="price-filter-container">
+              <h4 className="filter-heading">Filter by price</h4>
+              <div className="radio-group-container">
+                <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+                  {prices?.map((p) => (
+                    <div key={p._id} className="radio-item">
+                      <Radio value={p.array} className="custom-radio">{p.name}</Radio>
+                    </div>
+                  ))}
+                </Radio.Group>
+              </div>
+            </div> */}
+
+            <div className="filter-container">
+              <div className="filter-section">
+                <h4 className="filter-heading">Filter by category</h4>
+                <div className="category-checkbox-container">
+                  {categories?.map((c) => (
+                    <Checkbox
+                      key={c._id}
+                      onChange={(e) => handleFilter(e.target.checked, c._id)}
+                    >
+                      {c.name}
+                    </Checkbox>
+                  ))}
+                </div>
+              </div>
             </div>
+            <div className="filter-container">
+              <div className="filter-section">
+                <h4 className="filter-heading">Filter by price</h4>
+                <div className="radio-group-container">
+                  <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+                    {prices?.map((p) => (
+                      <div key={p._id} className="radio-item">
+                        <Radio value={p.array} className="custom-radio">
+                          {p.name}
+                        </Radio>
+                      </div>
+                    ))}
+                  </Radio.Group>
+                </div>
+              </div>
+            </div>
+
             <div className="d-flex flex-column">
               <button
                 className="btn btn-danger"
@@ -174,17 +210,14 @@ const HomePage = () => {
                   </div>
                 </div>
               ))}
-<<<<<<< HEAD
+
             </div> */}
 
-          <div className="col-md-9 offset-1">
+          <div className="col-md-10 pl-5 ">
             <h1 className="text-center">All Products</h1>
-            <div className="d-flex flex-wrap">
+            <div className="d-flex flex-wrap justify-content-around">
               {products?.map((p) => (
-                <div
-                  className={"card-1"}
-                  key={p._id}
-                >
+                <div className={"card-1"} key={p._id}>
                   <div className="product-image-container">
                     <img
                       className="product-image"
@@ -195,7 +228,8 @@ const HomePage = () => {
                   <div className="product-details">
                     <h3 className="product-name">{p.name}</h3>
                     <p className="product-description">
-                      {p.description.substring(0, 30)}...
+                      {p.description}
+                      {/* {p.description.substring(0, 30)}... */}
                     </p>
                     <p className="product-price">₹ {p.price}</p>
                   </div>
@@ -204,13 +238,21 @@ const HomePage = () => {
                       className="button"
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
-                      More Details 
+                      More Details
                     </button>
-                    <button className="button" onClick={()=>{
-                      setCart([...cart,p])
-                      localStorage.setItem("cart",JSON.stringify([...cart,p]))
-                      toast.success("Product Added To Cart")
-                    }}>Add to Cart</button>
+                    <button
+                      className="button"
+                      onClick={() => {
+                        setCart([...cart, p]);
+                        localStorage.setItem(
+                          "cart",
+                          JSON.stringify([...cart, p])
+                        );
+                        toast.success("Product Added To Cart");
+                      }}
+                    >
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
               ))}

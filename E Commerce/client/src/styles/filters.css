@@ -1,0 +1,67 @@
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-section {
+  border: 1px solid #f39c12;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.filter-heading {
+  font-size: 1.5rem;
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+.radio-group-container,
+.category-checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-radio input[type="radio"],
+.ant-checkbox-input {
+  margin-right: 10px;
+  border-color: #f39c12;
+  background-color: #f39c12; /* Set background color */
+}
+.ant-checkbox-input:checked:hover {
+  border-color: #f39c12;
+  background-color: #f39c12; /* Set background color */
+}
+
+.custom-radio input[type="radio"]:checked,
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #f39c12; /* Set checked background color */
+  border-color: #f39c12; /* Set checked border color */
+}
+
+.custom-radio,
+.ant-checkbox-wrapper {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #f39c12;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  font-size: 1rem;
+}
+
+.custom-radio:hover,
+.ant-checkbox-wrapper:hover {
+  background-color: #f9e5c8;
+
+}
+
+.ant-radio-checked .ant-radio-inner {
+  border-color: #f39c12 !important ;
+  background-color: #f39c12 !important;
+}
