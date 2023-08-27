@@ -3,13 +3,14 @@
 .card-1 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold; /* Set font weight to bold */
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   width: 330px;
   margin: 20px;
+
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -21,6 +22,8 @@
 
 .product-image-container {
   overflow: hidden;
+  /* background: linear-gradient(300deg, #141414, #070606, #232323); */
+  /* background: linear-gradient(300deg, #574200, #070606, #232323);  */
   position: relative;
   padding: 10px; /* Add padding for spacing */
   border-radius: 10px 10px 0 0; /* Rounded corners on top */
@@ -28,7 +31,9 @@
 
 .product-image {
   width: 100%;
-  border: 1px solid black;
+  padding: 15px;
+  border: 1px solid rgb(185, 185, 185);
+  background: #fff;
   height: auto; /* Adjust the height to fit the container */
   transition: transform 0.3s ease;
   object-fit: cover; /* Maintain aspect ratio and cover the container */
@@ -43,25 +48,31 @@
 .product-details {
   padding: 20px;
   padding-bottom: 15px;
+  /* background: linear-gradient(300deg, #181855, #070606, #000000); */
+  /* background: linear-gradient(300deg, #614700, #000000);  */
 }
 
 .product-name {
   font-size: 1.4rem;
   margin-bottom: 10px;
-  color: #333;
+  text-align: center;
+  text-shadow:0 1px  #8a8a8a ;
+  color: #000000;
   font-weight: bold; /* Set font weight to bold */
 }
 
 .product-description {
   font-size: 1rem;
-  color: #676161;
+  color: #767676;
+  text-align: center;
   margin-bottom: 15px;
   font-weight: bold; /* Set font weight to bold */
 }
 
 .product-price {
   font-size: 1.3rem;
-  color: #ff5722;
+  color: #ff0019;
+  text-align: center;
   margin-bottom: 15px;
   font-weight: bold; /* Set font weight to bold */
 }
@@ -69,18 +80,20 @@
 .buttons-container {
   display: flex;
   justify-content: space-around;
+  /* background: linear-gradient(270deg, #171754, #070606, #000000); */
+  /* background: linear-gradient(300deg, #6f5200, #070606);  */
   align-items: center;
   padding: 0 20px 20px;
 }
 
 .button {
-  padding: 10px 20px;
-  background-color: #ff5722;
-  color: #fff;
+  padding: 10px ;
+  background: linear-gradient(300deg, #f3b200, #ffe058);
+  color: #000000;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold; /* Set font weight to bold */
   transition: background-color 0.3s ease;
   width: 120px;
@@ -88,7 +101,8 @@
 }
 
 .button:hover {
-  background-color: #ff8a50;
+  /* background-color: #7cb6fc; */
+  background: linear-gradient( #f8cd59, #f1df92);
 }
 
 .product-name-h4 {
