@@ -218,20 +218,25 @@ const HomePage = () => {
             <div className="d-flex flex-wrap justify-content-around">
               {products?.map((p) => (
                 <div className={"card-1"} key={p._id}>
+
                   <div className="product-image-container">
+                  {/* <div className="shape"> */}
                     <img
                       className="product-image"
                       src={`/api/v1/product/product-photo/${p._id}`}
                       alt="Product Image"
                     />
                   </div>
+                {/* </div> */}
+
                   <div className="product-details">
                     <h3 className="product-name">{p.name}</h3>
+                    <p className="product-price">₹ {p.price}</p>
                     <p className="product-description">
+                      <p className="topic">Description</p>
                       {p.description}
                       {/* {p.description.substring(0, 30)}... */}
                     </p>
-                    <p className="product-price">₹ {p.price}</p>
                   </div>
                   <div className="buttons-container">
                     <button
@@ -253,8 +258,8 @@ const HomePage = () => {
                     >
                       Add to Cart
                     </button>
+                    </div>
                   </div>
-                </div>
               ))}
             </div>
 
