@@ -111,7 +111,7 @@ const HomePage = () => {
   };
   return (
     <Layout title={"All Products"}>
-      <div className="container-fluid row mt-3">
+      <div className="container-fluid row">
         <div className="row mt-2">
           <div className="col-md-2">
             {/* category filter  */}

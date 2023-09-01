@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
+.text-center{
+  color: #ffffff;
+}
+
 .card-1 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold; /* Set font weight to bold */
-  border: 2px solid rgb(0, 0, 0);
+  /* border: 2px solid rgb(92, 92, 92); */
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  background: rgba(0, 0, 0, 0.064);
+  backdrop-filter: blur(5px);
   width: 330px;
   margin: 20px;
+  border: 1px solid rgba(219, 35, 25, 0.903);
+
 
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -17,7 +24,7 @@
 
 .card-1:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(225, 225, 225, 0.15);
   
 }
 
@@ -34,8 +41,8 @@
 .product-image {
   width: 100%;
   padding: 35px;
-  border: 1px solid rgb(185, 185, 185);
-  /* background: #fff; */
+  /* border: 1px solid rgb(92, 92, 92); */
+  background: #181a1b;
   height: auto; /* Adjust the height to fit the container */
   transition: transform 0.3s ease;
   object-fit: cover; /* Maintain aspect ratio and cover the container */
@@ -60,13 +67,13 @@
   margin-bottom: 10px;
   text-align: center;
   text-shadow:0 1px  #8a8a8a ;
-  color: #000000;
+  color: #f3f3f3;
   font-weight: bold; /* Set font weight to bold */
 }
 
 .product-description {
   font-size: 1rem;
-  color: #767676;
+  color: #f80808;
   /* text-align: center; */
   margin-bottom: 15px;
   font-weight: bold; /* Set font weight to bold */
@@ -78,7 +85,7 @@
   margin: 0;
   margin-left: 5px;
   font-style: bold;
-  color: #000000;
+  color: #e3e3e3;
 }
 
 .product-price {
@@ -100,7 +107,8 @@
 
 .button {
   padding: 10px ;
-  background: linear-gradient(300deg, #f3b200, #ffe058);
+  /* background: linear-gradient(300deg, #f39c12, #ffe058); */
+  background: linear-gradient(300deg, #ffffff, #a8a8a8);
   color: #000000;
   border: none;
   border-radius: 20px;
@@ -114,7 +122,7 @@
 
 .button:hover {
   /* background-color: #7cb6fc; */
-  background: linear-gradient( #f8cd59, #f1df92);
+  background: linear-gradient(150deg, #ffa0a0, #ff6565);
 }
 
 .product-name-h4 {

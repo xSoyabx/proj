@@ -5,7 +5,7 @@
 }
 
 .filter-section {
-  border: 1px solid #f39c12;
+  border: 1px solid rgba(219, 35, 25, 0.903);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -15,7 +15,8 @@
 
 .filter-heading {
   font-size: 1.5rem;
-  color: #f39c12;
+  color: rgba(255, 255, 255, 0.903);
+  font-weight: 400;
   margin-bottom: 15px;
 }
 
@@ -29,25 +30,26 @@
 .custom-radio input[type="radio"],
 .ant-checkbox-input {
   margin-right: 10px;
-  border-color: #f39c12;
-  background-color: #f39c12; /* Set background color */
+  border-color: rgba(219, 35, 25, 0.903);
+  background-color: rgba(219, 35, 25, 0.903); /* Set background color */
 }
 .ant-checkbox-input:checked:hover {
-  border-color: #f39c12;
-  background-color: #f39c12; /* Set background color */
+  border-color: rgba(219, 35, 25, 0.903);
+  background-color: rgba(219, 35, 25, 0.903); /* Set background color */
 }
 
 .custom-radio input[type="radio"]:checked,
 .ant-checkbox-checked .ant-checkbox-inner {
-  background-color: #f39c12; /* Set checked background color */
-  border-color: #f39c12; /* Set checked border color */
+  background-color: rgba(219, 35, 25, 0.903); /* Set checked background color */
+  border-color: rgba(219, 35, 25, 0.903); /* Set checked border color */
 }
 
 .custom-radio,
 .ant-checkbox-wrapper {
   cursor: pointer;
   padding: 10px;
-  border: 1px solid #f39c12;
+  color: #fff;
+  border: 1px solid rgba(219, 35, 25, 0.903);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -57,11 +59,18 @@
 
 .custom-radio:hover,
 .ant-checkbox-wrapper:hover {
-  background-color: #f9e5c8;
+  background-color: #956f36;
 
 }
 
 .ant-radio-checked .ant-radio-inner {
-  border-color: #f39c12 !important ;
-  background-color: #f39c12 !important;
+  border-color: rgba(219, 35, 25, 0.903) !important ;
+  background-color: rgba(219, 35, 25, 0.903) !important;
+}
+
+.btn-danger{
+  background-color:transparent;
+  font-size: large;
+  font-weight: 400;
+  border: 4px solid #f39c12!important;
 }
