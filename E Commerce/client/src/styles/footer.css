@@ -78,23 +78,91 @@
   grid-column: 4 / 7;
 }
 
-.footer-menu h2{
-  border-bottom: 2px solid #0099ff; /* Adjust the thickness and color as needed */
+ h2{
+  position: relative;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
+#heading-1::before{
+  /* Adjust the thickness and color as needed */
+  content: "";
+  position: absolute;
+  left: 140px;
+  bottom: -10px;
+  width: 220px;
+  height: 5px;
+  background: linear-gradient(135deg, #0099ff, #ffffff);
+}
+#heading-2::before{
+  /* Adjust the thickness and color as needed */
+  content: "";
+  position: absolute;
+  left: 120px;
+  bottom: -10px;
+  width: 260px;
+  height: 5px;
+  background: linear-gradient(135deg, #0099ff, #ffffff);
+}
+
+.li-4{
+  /* border: 2px solid #ff0000;
+  border-radius: 10px; */
+  border-bottom: 2px solid #88ff00;
+  padding: 5px 15px;
+  /* padding: 10px; */
+  color: #ffffff;
+}
+
+.footer-menu a {
+  border: 2px solid #88ff00;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 8px 15px;
+  /* padding: 10px; */
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  justify-content: center;
+  text-align: center;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+
+.footer-menu li {
+  display: grid;
+  padding-left: 20px;
+}
+.footer-menu a:hover {
+  color: #00f7ff;
+}
+
 .nav-link-1{
   font-size: 25px;
   padding-bottom: 15px;
 }
-.footer-menu a{
-  color: #fff;
+
+.ul-3 {
+  /* list-style: none; */
   padding-left: 0;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  /* justify-content: center;
+  text-align: center; */
 }
-ul{
-  padding-left: 0;
+.ul-4 {
+  margin-top: 20px;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
+
+
 /* Styles for the form */
 form {
   display: flex;
@@ -112,26 +180,37 @@ input {
   padding-bottom: 10px;
 }
 
+#emailInput{
+  margin-bottom: 10px;
+}
+
 /* Styles for the submit button */
 button {
   padding: 10px 20px; 
   background-color: #000000;
   color: #fff;
   font-weight: 600;
-  border: 0.5px solid #323232;
+  border: 0.5px solid #ff0000;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #ffffff;
+  background-color: #7a7a7a;
   color: #000;
 }
 #item-4 {
   background-color: transparent;
+  padding: 30px;
   grid-row: 1 / 4;
   grid-column: 7 / 10;
 }
+
+iframe{
+  border: 3px solid #7fdcfe;
+  border-radius: 20px;
+}
+
 #item-5 {
   padding-top: 5px;
   padding-left: -10px;
@@ -148,11 +227,12 @@ button:hover {
   width: 100%;
 }
 .copyright span {
-  color: #9f9f9f;
+  /* color: #9f9f9f; */
+  color: #d2d2d2;
 }
 
 .parent-footer {
-  background: linear-gradient(300deg, #8c0303, #070606, #232323);
+  background: linear-gradient(300deg, #585858, #070606, #232323);
   background-size: 180% 180%;
   animation: gradient-animation 20s ease infinite;
   box-shadow: 0 2px 4px;
@@ -187,7 +267,7 @@ button:hover {
   }
 }
 
-/* Footer CSS  */
+
 
 @media screen and (max-width: 768px) {
   .footer {
@@ -205,17 +285,6 @@ button:hover {
   }
 }
 
-.footer-menu a {
-  color: #9f9f9f;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-.footer-menu ul {
-  text-align: right;
-  margin: 0;
-}
-
 .footer-social-link {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -224,15 +293,9 @@ button:hover {
   transition: all 0.3s linear;
 }
 
-.footer-menu li {
-  display: grid;
-  padding-left: 20px;
-}
+
 
 .ul-1 {
   text-decoration: double;
 }
 
-.footer-menu a:hover {
-  color: #00f7ff;
-}

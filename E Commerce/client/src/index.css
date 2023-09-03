@@ -32,6 +32,10 @@ main{
   box-sizing: border-box;
 }
 
+h1{
+  color: #ffffff;
+}
+
 /* font-family: 'Josefin Sans', sans-serif;
 font-family: 'Libre Baskerville', serif;
 font-family: 'Nunito Sans', sans-serif;
@@ -94,7 +98,6 @@ button.navbar-toggler {
 
 .navbar-nav {
   list-style: none;
-  float: left;
   /* display: flex;
   align-items: center;
   margin: 0;
@@ -108,7 +111,7 @@ button.navbar-toggler {
   justify-content: space-between;
   padding: 0 3px;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   white-space: nowrap;
   transition: 0.3s;
