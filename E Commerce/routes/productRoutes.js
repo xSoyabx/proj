@@ -61,7 +61,6 @@ router.get('/search/:keyword',serachProductController)
 //similar product
 router.get("/related-product/:pid/:cid",relatedProductController)
 
-
 //category wise product
 router.get("/product-category/:slug",productCategoryController)
 export default router;
