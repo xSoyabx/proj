@@ -23,7 +23,7 @@ main{
   background: linear-gradient(300deg, #343333, #070606, #232323);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
-  /* padding-top: 20px; */
+  padding-top: 20px;
 }
 
 * {
