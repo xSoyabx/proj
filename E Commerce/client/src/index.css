@@ -36,6 +36,26 @@ h1{
   color: #ffffff;
 }
 
+.home-text-center{
+    /* border-bottom: 5px solid #007bff; */
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .home-text-center::before{
+    /* Adjust the thickness and color as needed */
+    content: "";
+    position: absolute;
+    justify-content: center;
+    bottom: -7px;
+    width: 180px;
+    height: 5px;
+    background: linear-gradient(135deg, #ff0000, #272727);
+  }
+
 /* font-family: 'Josefin Sans', sans-serif;
 font-family: 'Libre Baskerville', serif;
 font-family: 'Nunito Sans', sans-serif;

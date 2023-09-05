@@ -5,6 +5,7 @@ import { Modal } from "antd";
 import Layout from "../../components/layout/layout";
 import AdminMenu from "../../components/layout/AdminMenu";
 import CategoryForm from "../../components/forms/CategoryForm";
+import "../../styles/AdminStyle.css"
 
 const CreateCategory = () => {
   const [categories, setCategories] = useState([]);

@@ -70,3 +70,24 @@
     color: #fff;
     border: none;
 }
+
+.category-table{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    height: 400px;
+    color: #fff;
+    word-wrap: break-word;
+    background: rgba(186, 186, 186, 0.16);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15.6px);
+    -webkit-backdrop-filter: blur(15.6px);
+    background: rgba(255, 255, 255, 0.064);
+    background-clip: border-box;
+    border: 2px solid #414141;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}

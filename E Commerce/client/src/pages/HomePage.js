@@ -214,7 +214,7 @@ const HomePage = () => {
             </div> */}
 
           <div className="col-md-10 pl-5 ">
-            <h1 className="text-center">All Products</h1>
+            <h1 className="home-text-center">All Products</h1>
             <div className="d-flex flex-wrap justify-content-around">
               {products?.map((p) => (
                 <div className={"card-1"} key={p._id}>

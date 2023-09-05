@@ -215,7 +215,7 @@ input {
 }
 
 iframe{
-  border: 3px solid #7fdcfe;
+  border: 7px solid #000000;
   border-radius: 20px;
 }
 
@@ -250,9 +250,10 @@ iframe{
 .footer-info-text {
   display: flex;
   text-align: center;
-  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-family: "Nunito", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   line-height: 28px;
 }
