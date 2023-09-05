@@ -152,10 +152,9 @@ button.navbar-toggler {
   border-radius: 25%; */
 }
 
-.dropdown-menu.show{
+/* .dropdown-menu.show{
 background: rgba(0, 0, 0, 0.661);
 border-radius: 16px;
-/* max-width: 100px; */
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5.6px);
 -webkit-backdrop-filter: blur(5.6px);
@@ -165,7 +164,7 @@ border: 1px solid rgba(186, 186, 186, 0.61);
 .dropdown-item{
   color: #fff;
   width: 70px;
-}
+} */
 
 .navbar > ul > li > a:before {
   content: "";
