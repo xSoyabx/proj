@@ -156,7 +156,7 @@ const Footer = () => {
         </div>
         <div id="item-2">
           <div className="footer-social-link">
-            <h3>Follow us</h3>
+            <h3 id="heading-1">Follow us</h3>
             <ul className="ul-1">
               <li className="li-1">
                 <Link
@@ -188,17 +188,17 @@ const Footer = () => {
                 <BiMailSend /> : dummy@email.com
               </li>
               <li className="li-2">
-                <BiPhoneCall /> : 098914 08448
+                <BiPhoneCall id="phone" /> : 098914 08448
               </li>
               <li className="li-2">
-                <BiPhoneCall /> : 098100 57030
+                <BiPhoneCall id="phone" /> : 098100 57030
               </li>
             </ul>
           </div>
         </div>
         <div id="item-3">
           <div className="footer-menu">
-            <h2 id="heading-1">USEFUL LINKS</h2>
+            <h2 id="heading-2">USEFUL LINKS</h2>
             <ul className="ul-3">
               <li>
                 <NavLink to="/" className="nav-link-1" aria-current="page">
@@ -229,7 +229,7 @@ const Footer = () => {
                 </NavLink>
               </li>
             </ul>
-          <h2 id="heading-2">OPENING HOURS</h2>
+          <h2 id="heading-3">OPENING HOURS</h2>
             <ul className="ul-4">
                 <li className="li-4">Mon:	9:00 am - 10:00 pm</li>
                 <li className="li-4">Tue:	9:00 am - 10:00 pm</li>
@@ -266,7 +266,7 @@ const Footer = () => {
       </div>
       <div id="item-5">
         <div className="copyright">
-          <span>Copyright © 2019, --</span>
+          <span>Copyright © 2022, ROHINI HELMETS All Rights reserved</span>
         </div>
       </div>
       <ScrollButton />

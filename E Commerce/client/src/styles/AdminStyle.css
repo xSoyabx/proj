@@ -1,0 +1,72 @@
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    min-width: 0;
+    height: 200px;
+    color: #fff;
+    word-wrap: break-word;
+    background: rgba(255, 255, 255, 0.064);
+    background-clip: border-box;
+    border: 2px solid #414141;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+#admin-heading{
+    font-size: 30px;
+}
+
+.list-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    min-width: 0;
+    padding: 8px;
+    color: #fff;
+    word-wrap: break-word;
+    background: rgba(186, 186, 186, 0.16);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15.6px);
+    -webkit-backdrop-filter: blur(15.6px);
+    background: rgba(255, 255, 255, 0.064);
+    background-clip: border-box;
+    border: 2px solid #414141;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+.list-group-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    min-width: 0;
+    color: #000000;
+    word-wrap: break-word;
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+    background-clip: border-box;
+    border: 2px solid #414141;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    backdrop-filter: blur(10px);
+}
+.list-group-item:hover {
+    color: #000000;
+    background: #636363df !important;
+    background-clip: border-box;
+    color: #fff;
+    border: none;
+}
+.list-group-item.active {
+    color: #000000;
+    background: #0358ae !important;
+    background-clip: border-box;
+    color: #fff;
+    border: none;
+}

@@ -20,7 +20,7 @@
 
 main{
   /* background-color: #f2f2f2; */
-  background: linear-gradient(300deg, #343333, #070606, #232323);
+  background: linear-gradient(300deg, #575757, #070606, #232323);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
   padding-top: 20px;
@@ -132,6 +132,21 @@ button.navbar-toggler {
   border-radius: 25%; */
 }
 
+.dropdown-menu.show{
+background: rgba(0, 0, 0, 0.661);
+border-radius: 16px;
+/* max-width: 100px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.6px);
+-webkit-backdrop-filter: blur(5.6px);
+border: 1px solid rgba(186, 186, 186, 0.61);
+}
+
+.dropdown-item{
+  color: #fff;
+  width: 70px;
+}
+
 .navbar > ul > li > a:before {
   content: "";
   position: absolute;
@@ -156,12 +171,12 @@ button.navbar-toggler {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: rgb(123, 123, 123);
+  color: rgb(255, 8, 8);
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
-  color: rgb(255, 120, 120);
+.navbar-nav .nav-link.active
+.nav-link.show {
+  color: rgb(255, 170, 0);
 }
 
 .navbar > ul > li {
@@ -307,6 +322,28 @@ img{
 
 .c-text {
   font-family: "Nunito Sans", sans-serif;
+}
+
+.cart-card{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 700px;
+  height: 250px;
+  margin-bottom: 20px;
+  color: #fff;
+  word-wrap: break-word;
+  background: rgba(57, 57, 57, 0.585);
+  background-clip: border-box;
+  border: 2px solid #414141;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.braintree-heading{
+  color: #fff;
+  font-size: 18px;
 }
 
 /*=======================*/

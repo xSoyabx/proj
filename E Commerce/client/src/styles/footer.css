@@ -1,16 +1,16 @@
 .angry-grid {
   display: grid;
 
-  grid-template: 1fr 0fr  / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template: 1fr 0fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
   gap: 0px;
   height: 100%;
 }
 
 #item-0 {
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 10px;
+  padding-left: 10px; 
+   padding-bottom: 10px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +48,7 @@
 }
 .footer-social-link h3{
   display: flex;
-  color: #88ff00;
+  color: #ffffff;
   justify-content: center;
   align-items: center;
 }
@@ -65,6 +65,11 @@
  list-style: none;
  font-size: 20px;
 }
+
+#phone{
+  color: #ff0000;
+}
+
 #item-3 {
   background-color: transparent;
   font-size: 20px;
@@ -86,23 +91,41 @@
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
+ #heading-1{
+  position: relative;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
 #heading-1::before{
   /* Adjust the thickness and color as needed */
   content: "";
   position: absolute;
-  left: 170px;
-  bottom: -10px;
-  width: 220px;
+  justify-content: center;
+  bottom: -7px;
+  width: 145px;
   height: 5px;
-  background: linear-gradient(135deg, #0099ff, #ffffff);
+  background: linear-gradient(135deg, #88ff00, #ffffff);
 }
 #heading-2::before{
   /* Adjust the thickness and color as needed */
   content: "";
   position: absolute;
-  left: 150px;
+  justify-content: center;
   bottom: -10px;
-  width: 260px;
+  width: 195px;
+  height: 5px;
+  background: linear-gradient(135deg, #0099ff, #ffffff);
+}
+#heading-3::before{
+  /* Adjust the thickness and color as needed */
+  content: "";
+  position: absolute;
+  justify-content: center;
+  bottom: -10px;
+  width: 235px;
   height: 5px;
   background: linear-gradient(135deg, #0099ff, #ffffff);
 }
@@ -184,21 +207,6 @@ input {
   margin-bottom: 10px;
 }
 
-/* Styles for the submit button */
-button {
-  padding: 10px 20px; 
-  background-color: #000000;
-  color: #fff;
-  font-weight: 600;
-  border: 0.5px solid #ff0000;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #7a7a7a;
-  color: #000;
-}
 #item-4 {
   background-color: transparent;
   padding: 30px;
