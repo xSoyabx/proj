@@ -102,14 +102,18 @@ const CreateCategory = () => {
                 setValue={setName}
               />
             </div>
-            <div className="w-75">
-              <table className="table">
+            <div className="tb1-header">
+              <table className="category-table" cellpadding="0" cellspacing="0" border="0">
                 <thead>
                   <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Actions</th>
+                    <th>Name</th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
+              </table>
+            </div>
+            <div class="tbl-content">
+              <table>
                 <tbody>
                   {categories?.map((c) => (
                     <>
