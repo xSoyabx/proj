@@ -73,6 +73,8 @@ const Products = () => {
         "http://localhost:3000/api/v1/product/get-product"
       );
       setProducts(data.products);
+      console.log("Received data:", data);
+      console.log("Current products state:", products);
     } catch (error) {
       console.log(error);
       toast.error("Something Went Wrong");
@@ -110,11 +112,7 @@ const Products = () => {
                       <p className="card-text">{p.description}</p>
                     </div>
                   </div> */}
-
-                  <div
-                    className="card-1"
-                    key={p._id}
-                  >
+                  <div className="card-1" key={p._id}>
                     <div className="product-image-container">
                       <img
                         className="product-image"

@@ -85,7 +85,7 @@ export const getProductController = async (req, res) => {
       .find({})
       .populate("category")
       .select("-photo")
-      .limit(12)
+      // .limit(12) this line has limit on admin products display
       .sort({ ceatedAt: -1 });
     res.status(200).send({
       success: true,
