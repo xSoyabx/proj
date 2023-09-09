@@ -46,7 +46,7 @@ const Header = () => {
           >
             {/* <div className="justify-content-center"> */}
             {/* Display logo photo only for screen size larger than 767px */}
-            <div className="logo">
+            {/* <div className="logo">
               <img
                 className="H-logo"
                 src={logo}
@@ -55,7 +55,7 @@ const Header = () => {
                   display: window.innerWidth > 767 ? "block" : "none",
                 }}
               />
-            </div>
+            </div> */}
             <div>
               <NavLink to="/" style={{ textDecoration: "none" }}>
                 <span
