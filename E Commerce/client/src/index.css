@@ -24,7 +24,6 @@ main {
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
   padding-top: 20px;
-  
 }
 
 * {
