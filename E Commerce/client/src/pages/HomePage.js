@@ -9,6 +9,20 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
 import "../styles/filters.css";
+import ImageSlider from "../components/layout/imageSlider";
+
+// import image1 from "";
+// import image2 from "../images/1112.jpg";
+// import image3 from "../images/1113.jpg";
+// import image4 from "../images/1114.jpg";
+
+import img1 from "../image/1111.jpg"
+import img2 from "../image/1112.jpg"
+import img3 from "../image/1113.jpg"
+import img4 from "../image/1114.jpg"
+import img5 from "../image/1115.jpg"
+
+const images = [img1,img2,img3,img4,img5];
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -111,6 +125,10 @@ const HomePage = () => {
   };
   return (
     <Layout title={"All Products"}>
+      <div className="App">
+      <ImageSlider images={images} interval={5000} width="100%" height="700px" />
+
+      </div>
       <div className="container-fluid row">
         <div className="row mt-2">
           <div className="col-md-2">
@@ -218,16 +236,15 @@ const HomePage = () => {
             <div className="d-flex flex-wrap justify-content-around">
               {products?.map((p) => (
                 <div className={"card-1"} key={p._id}>
-
                   <div className="product-image-container">
-                  {/* <div className="shape"> */}
+                    {/* <div className="shape"> */}
                     <img
                       className="product-image"
                       src={`/api/v1/product/product-photo/${p._id}`}
                       alt="Product Image"
                     />
                   </div>
-                {/* </div> */}
+                  {/* </div> */}
 
                   <div className="product-details">
                     <h3 className="product-name">{p.name}</h3>
@@ -258,8 +275,8 @@ const HomePage = () => {
                     >
                       Add to Cart
                     </button>
-                    </div>
                   </div>
+                </div>
               ))}
             </div>
 

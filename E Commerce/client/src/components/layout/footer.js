@@ -8,129 +8,133 @@ import ScrollButton from "../forms/ScrollButton";
 import {} from "antd";
 import "../../styles/footer.css";
 
+//     <div>
+//       {/* <div className="container-footer"> */}
+//       <div className="col-md-14 col-lg-13">
+//         <div className="container-footer">
+//           <NavLink to="/" style={{ textDecoration: "none" }}>
+//             <span
+//               className="footer-logo"
+//               style={{
+//                 color: "Red",
+//                 fontSize: "29px",
+//                 fontFamily: "lost-treasure",
+//                 cursor: "pointer",
+//                 marginLeft: "40px",
+//               }}
+//             >
+//               Rohini Helmets
+//             </span>
+//           </NavLink>
+//           <p className="footer-info-text">
+//             Reference site about Lorem Ipsum, giving information on its origins,
+//             as well as a random Lipsum generator.
+//           </p>
+//           <div className="col-md-12">
+//             <div className="footer-menu">
+//               <ul>
+//                 <li>
+//                   <NavLink to="/" className="nav-link" aria-current="page">
+//                     Home
+//                   </NavLink>
+//                 </li>
+//                 <li>
+//                   <NavLink to="#" className="nav-link" aria-current="page">
+//                     Terms
+//                   </NavLink>
+//                 </li>
+//                 <li>
+//                   <NavLink
+//                     to="/policy"
+//                     className="nav-link"
+//                     aria-current="page"
+//                   >
+//                     Privacy Policy
+//                   </NavLink>
+//                 </li>
+//                 <li>
+//                   <NavLink
+//                     to="/contact"
+//                     className="nav-link"
+//                     aria-current="page"
+//                   >
+//                     Contact
+//                   </NavLink>
+//                 </li>
+//               </ul>
+//             </div>
+//             <div className="footer-social-link">
+//               <h3>Follow us</h3>
+//               <ul className="ul-1">
+//                 <li>
+//                   <Link
+//                     className="li-1 footer-social-link facebook"
+//                     to="https://www.facebook.com/HelmetMusic/"
+//                   >
+//                     <FaFacebook /> : Facebook
+//                   </Link>
+//                 </li>
+//                 <li>
+//                   <Link
+//                     className="li-1 footer-social-link instagram"
+//                     to="https://www.instagram.com/helmets_for_india/?hl=en"
+//                   >
+//                     <FaInstagram /> : Instagram
+//                   </Link>
+//                   <li>
+//                     <Link
+//                       className="li-1 footer-social-link whatsapp"
+//                       to="Whatsapp"
+//                     >
+//                       <FaWhatsapp /> : Whatsapp
+//                     </Link>
+//                   </li>
+//                   <li className="li-1">
+//                     <BiMailSend /> : dummy@email.com
+//                   </li>
+//                   <li className="li-1">
+//                     <BiPhoneCall /> : 012-3456789
+//                   </li>
+//                   <li className="li-1">
+//                     <BiSupport /> : 1800-0000-0000 (toll free)
+//                   </li>
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+//           {/* </div> */}
+//           {/* </div> */}
+//         </div>
+
+//         <div className="copyright">
+//           <div className="container-end-footer">
+//             <div className="row">
+//               <div className="col-md-12">
+//                 <span>Copyright © 2019, All Right Reserved Seobin</span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div id="back-to-top" className="back-to-top">
+//         <button
+//           className="btn btn-dark"
+//           title="Back to Top"
+//           style={{ display: "block" }}
+//         >
+//           <BiSolidUpArrow />
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
   return (
-    //     <div>
-    //       {/* <div className="container-footer"> */}
-    //       <div className="col-md-14 col-lg-13">
-    //         <div className="container-footer">
-    //           <NavLink to="/" style={{ textDecoration: "none" }}>
-    //             <span
-    //               className="footer-logo"
-    //               style={{
-    //                 color: "Red",
-    //                 fontSize: "29px",
-    //                 fontFamily: "lost-treasure",
-    //                 cursor: "pointer",
-    //                 marginLeft: "40px",
-    //               }}
-    //             >
-    //               Rohini Helmets
-    //             </span>
-    //           </NavLink>
-    //           <p className="footer-info-text">
-    //             Reference site about Lorem Ipsum, giving information on its origins,
-    //             as well as a random Lipsum generator.
-    //           </p>
-    //           <div className="col-md-12">
-    //             <div className="footer-menu">
-    //               <ul>
-    //                 <li>
-    //                   <NavLink to="/" className="nav-link" aria-current="page">
-    //                     Home
-    //                   </NavLink>
-    //                 </li>
-    //                 <li>
-    //                   <NavLink to="#" className="nav-link" aria-current="page">
-    //                     Terms
-    //                   </NavLink>
-    //                 </li>
-    //                 <li>
-    //                   <NavLink
-    //                     to="/policy"
-    //                     className="nav-link"
-    //                     aria-current="page"
-    //                   >
-    //                     Privacy Policy
-    //                   </NavLink>
-    //                 </li>
-    //                 <li>
-    //                   <NavLink
-    //                     to="/contact"
-    //                     className="nav-link"
-    //                     aria-current="page"
-    //                   >
-    //                     Contact
-    //                   </NavLink>
-    //                 </li>
-    //               </ul>
-    //             </div>
-    //             <div className="footer-social-link">
-    //               <h3>Follow us</h3>
-    //               <ul className="ul-1">
-    //                 <li>
-    //                   <Link
-    //                     className="li-1 footer-social-link facebook"
-    //                     to="https://www.facebook.com/HelmetMusic/"
-    //                   >
-    //                     <FaFacebook /> : Facebook
-    //                   </Link>
-    //                 </li>
-    //                 <li>
-    //                   <Link
-    //                     className="li-1 footer-social-link instagram"
-    //                     to="https://www.instagram.com/helmets_for_india/?hl=en"
-    //                   >
-    //                     <FaInstagram /> : Instagram
-    //                   </Link>
-    //                   <li>
-    //                     <Link
-    //                       className="li-1 footer-social-link whatsapp"
-    //                       to="Whatsapp"
-    //                     >
-    //                       <FaWhatsapp /> : Whatsapp
-    //                     </Link>
-    //                   </li>
-    //                   <li className="li-1">
-    //                     <BiMailSend /> : dummy@email.com
-    //                   </li>
-    //                   <li className="li-1">
-    //                     <BiPhoneCall /> : 012-3456789
-    //                   </li>
-    //                   <li className="li-1">
-    //                     <BiSupport /> : 1800-0000-0000 (toll free)
-    //                   </li>
-    //                 </li>
-    //               </ul>
-    //             </div>
-    //           </div>
-    //           {/* </div> */}
-    //           {/* </div> */}
-    //         </div>
-
-    //         <div className="copyright">
-    //           <div className="container-end-footer">
-    //             <div className="row">
-    //               <div className="col-md-12">
-    //                 <span>Copyright © 2019, All Right Reserved Seobin</span>
-    //               </div>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-
-    //       <div id="back-to-top" className="back-to-top">
-    //         <button
-    //           className="btn btn-dark"
-    //           title="Back to Top"
-    //           style={{ display: "block" }}
-    //         >
-    //           <BiSolidUpArrow />
-    //         </button>
-    //       </div>
-    //     </div>
-    //   );
-    // };
     <div className="parent-footer">
       <div className="angry-grid">
         <div id="item-0">
@@ -150,7 +154,8 @@ const Footer = () => {
         </div>
         <div id="item-1">
           <p className="footer-info-text">
-          "Ride in style, ride in safety – our helmet collection offers the best of both worlds for discerning riders."
+            "Ride in style, ride in safety – our helmet collection offers the
+            best of both worlds for discerning riders."
           </p>
         </div>
         <div id="item-2">
@@ -200,12 +205,22 @@ const Footer = () => {
             <h2 id="heading-2">USEFUL LINKS</h2>
             <ul className="ul-3">
               <li>
-                <NavLink to="/" className="nav-link-1" aria-current="page">
+                <NavLink
+                  to="/"
+                  className="nav-link-1"
+                  aria-current="page"
+                  onClick={scrollToTop}
+                >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="#" className="nav-link-1" aria-current="page">
+                <NavLink
+                  to="#"
+                  className="nav-link-1"
+                  aria-current="page"
+                  onClick={scrollToTop}
+                >
                   Terms
                 </NavLink>
               </li>
@@ -214,6 +229,7 @@ const Footer = () => {
                   to="/contact"
                   className="nav-link-1"
                   aria-current="page"
+                  onClick={scrollToTop}
                 >
                   Contact
                 </NavLink>
@@ -223,20 +239,21 @@ const Footer = () => {
                   to="/policy"
                   className="nav-link-1"
                   aria-current="page"
+                  onClick={scrollToTop}
                 >
                   Policy
                 </NavLink>
               </li>
             </ul>
-          <h2 id="heading-3">OPENING HOURS</h2>
+            <h2 id="heading-3">OPENING HOURS</h2>
             <ul className="ul-4">
-                <li className="li-4">Mon:	9:00 am - 10:00 pm</li>
-                <li className="li-4">Tue:	9:00 am - 10:00 pm</li>
-                <li className="li-4">Wed:	9:00 am - 10:00 pm</li>
-                <li className="li-4">Thu:	9:00 am - 10:00 pm</li>
-                <li className="li-4">Fri:	9:00 am - 10:00 pm</li>
-                <li className="li-4">Sat:	9:00 am - 10:00 pm</li>
-                <li className="li-4">Sun:	9:00 am - 10:30 pm</li>
+              <li className="li-4">Mon: 9:00 am - 10:00 pm</li>
+              <li className="li-4">Tue: 9:00 am - 10:00 pm</li>
+              <li className="li-4">Wed: 9:00 am - 10:00 pm</li>
+              <li className="li-4">Thu: 9:00 am - 10:00 pm</li>
+              <li className="li-4">Fri: 9:00 am - 10:00 pm</li>
+              <li className="li-4">Sat: 9:00 am - 10:00 pm</li>
+              <li className="li-4">Sun: 9:00 am - 10:30 pm</li>
             </ul>
             {/* <form>
               <input
