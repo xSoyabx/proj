@@ -61,7 +61,7 @@ const Header = () => {
                 <span
                   className="logo-font"
                   style={{
-                    color: "Red",
+                    color: "white",
                     fontSize: "27px",
                     fontFamily: "lost-treasure",
                     cursor: "pointer",
@@ -75,7 +75,7 @@ const Header = () => {
             </div>
             {/* </div> */}
             {/* <img className="H-logo" src={logo} alt="logo" /> */}
-            <div className="header ">
+            <div className="header">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <NavLink
@@ -89,7 +89,7 @@ const Header = () => {
                 </li>
                 <li className="nav-item dropdown">
                   <Link
-                    className="nav-link dropdown-toggle"
+                    className="nav-link-2 dropdown-toggle"
                     to={"/categories"}
                     data-bs-toggle="dropdown"
                   >
@@ -131,7 +131,7 @@ const Header = () => {
                   <>
                     <li className="nav-item dropdown">
                       <NavLink
-                        className="nav-link dropdown-toggle"
+                        className="nav-link-2 dropdown-toggle"
                         href="#"
                         role="button"
                         data-bs-toggle="dropdown"

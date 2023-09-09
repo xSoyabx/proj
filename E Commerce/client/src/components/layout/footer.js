@@ -138,7 +138,7 @@ const Footer = () => {
             <span
               className="footer-logo"
               style={{
-                color: "Red",
+                color: "White",
                 fontSize: "40px",
                 fontFamily: "lost-treasure",
                 cursor: "pointer",
@@ -150,8 +150,7 @@ const Footer = () => {
         </div>
         <div id="item-1">
           <p className="footer-info-text">
-            Reference site about Lorem Ipsum, giving information on its origins,
-            as well as a random Lipsum generator.
+          "Ride in style, ride in safety – our helmet collection offers the best of both worlds for discerning riders."
           </p>
         </div>
         <div id="item-2">
