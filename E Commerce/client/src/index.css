@@ -424,7 +424,7 @@ img {
   --btn-animation-duration: 1.2s;
   --btn-shadow-color: rgba(0, 0, 0, 0.137);
   --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
-  --hover-btn-color: #ffa500;
+  --hover-btn-color: #ff0000;
   --default-btn-color: #fff;
   --font-size: 16px;
   /* 👆 this field should not be empty */
@@ -597,7 +597,7 @@ img {
 
 .ui-btn-edit {
   box-sizing: border-box;
-  border-radius: 5%;
+  border-radius: 30px;
   padding: var(--btn-padding);
   display: flex;
   align-items: center;
@@ -756,7 +756,7 @@ img {
 
 .ui-btn-delete {
   box-sizing: border-box;
-  border-radius: 5%;
+  border-radius: 30px;
   padding: var(--btn-padding);
   display: flex;
   align-items: center;

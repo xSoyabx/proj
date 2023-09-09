@@ -113,7 +113,7 @@ const CreateCategory = () => {
               </table>
             </div>
             <div class="tbl-content">
-              <table>
+              <table className="category-table" cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                   {categories?.map((c) => (
                     <>
