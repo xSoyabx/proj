@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import Layout from "../../components/layout/layout";
+// import Layout from "../../components/layout/layout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 // import "../../styles/AuthStyles.css";
 import "../../styles/login-forget.css";
+import Layout2 from "../../components/layout/layout2";
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
@@ -87,7 +88,7 @@ const ForgetPassword = () => {
 */
 
   return (
-    <Layout title="Forget Password">
+    <Layout2 title="Forget Password">
       <section
         className="body"
         style={{
@@ -160,7 +161,7 @@ const ForgetPassword = () => {
           </div>
         </section>
       </section>
-    </Layout>
+    </Layout2>
   );
 };
 

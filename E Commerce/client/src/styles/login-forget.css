@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* background: linear-gradient(to bottom,#414868,#000000); */
   /* background: linear-gradient(-45deg, #000000, #111111, #000000, #111111);
   background-size: 400% 400%;
@@ -10,7 +10,7 @@
   height: 100vh; */
 
   background: linear-gradient(300deg, #343333, #070606, #232323);
-  background-size: 180% 180%;
+  /* background-size: 180% 180%; */
   animation: gradient-animation 18s ease infinite;
 }
   

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import Layout from "./../../components/layout/layout";
+// import Layout from "./../../components/layout/layout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 // import "../../styles/AuthStyles.css";
 import "../../styles/register-style.css";
+import Layout2 from "../../components/layout/layout2";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -121,7 +122,7 @@ const Register = () => {
   };
 */
   return (
-    <Layout title="Register">
+    <Layout2 title="Register">
       <section
         className="body"
         style={{
@@ -230,7 +231,7 @@ const Register = () => {
           </div>
         </section>
       </section>
-    </Layout>
+    </Layout2>
   );
 };
 
