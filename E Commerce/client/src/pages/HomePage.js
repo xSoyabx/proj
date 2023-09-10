@@ -126,7 +126,7 @@ const HomePage = () => {
   return (
     <Layout title={"All Products"}>
       <div className="App">
-      <ImageSlider images={images} interval={5000} width="100%" height="700px" />
+      <ImageSlider images={images} interval={5000} width="100%" height="600px" />
 
       </div>
       <div className="container-fluid row">
