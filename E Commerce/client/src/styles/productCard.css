@@ -25,27 +25,36 @@
 
 .more-detail-container{
   display: flex;
+  background: radial-gradient(#4b050599, #000000);
 }
 
-/* .deatil-box{
+/* .detail-box{
   margin-left: 40px;
   height: 600px;
   width: 600px;
   padding: 50px;
 } */
-.deatil-box-2{
-  flex: 1; /* Allow both divs to grow and occupy equal width */
-  /* margin-left: 40px; */
+.detail-box-2{
+  display: flex;
+  justify-content: center;
   height: 600px;
   width: 50%;
-  /* margin: 50px; */
 }
 
 .product-detail-box{
+  /* background: linear-gradient(130deg,rgba(5, 19, 54, 0.661),rgba(16, 20, 30, 0.661)) ;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.6px);
+  border: 1px solid rgba(89, 89, 89, 0.822); */
+  border-radius: 20px;
   padding: 30px;
+  padding-left: 10%;
+  /* justify-content: center; */
   margin-top: 60px;
   margin-left: 15%;
   margin-right: 10%;
+  height: 80%;
+  width: 100%;
 }
 
 #p-brand{
