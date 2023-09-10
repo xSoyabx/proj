@@ -5,6 +5,9 @@ import AdminMenu from "../../components/layout/AdminMenu";
 import Layout from "../../components/layout/layout";
 import moment from "moment";
 import { Select } from "antd";
+import { DownCircleTwoTone } from "@ant-design/icons";
+import "../../styles/OrderTable.css";
+
 const { Option } = Select;
 
 const AdminOrders = () => {
@@ -43,17 +46,17 @@ const AdminOrders = () => {
   };
   return (
     <Layout title={"All Orders Data"}>
-      <div className="conatiner-fluid p-3">
-        <div className="row dashboard">
+      <div className="container-fluid p-3">
+        <div className="row">
           <div className="col-md-3">
             <AdminMenu />
           </div>
-          <div className="col-md-9">
+          <div className="order-box col-md-9">
             <h1 className="text-center">All Orders</h1>
             {orders?.map((o, i) => {
               return (
-                <div className="border shadow">
-                  <table className="table">
+                <div className="order1 shadow mb-3 p-3 d-flex flex-column align-items-center">
+                  <table className="content-table">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -69,12 +72,18 @@ const AdminOrders = () => {
                         <td>{i + 1}</td>
                         <td>
                           <Select
+                            suffixIcon={<DownCircleTwoTone />}
+                            className="form-select-order"
                             bordered={false}
                             onChange={(value) => handleChange(o._id, value)}
                             defaultValue={o?.status}
                           >
                             {status.map((s, i) => (
-                              <Option key={i} value={s}>
+                              <Option
+                                key={i}
+                                value={s}
+                                className="custom-option-order"
+                              >
                                 {s}
                               </Option>
                             ))}
@@ -87,23 +96,23 @@ const AdminOrders = () => {
                       </tr>
                     </tbody>
                   </table>
-                  <div className="container">
+                  <div className="container d-flex flex-column align-items-center">
                     {o?.products?.map((p, i) => (
-                      <div className="row mb-2 cart-card">
-                        <div className="col-md-4">
+                      <div className="row mb-2 order-cart-card">
+                        <div className="order-cart-image col-md-4">
                           <img
-                            className="product-image"
+                            className="product-image-order"
                             src={`/api/v1/product/product-photo/${p._id}`}
                             alt={p.name}
                             width="100px"
                             height="100px"
                           />
                         </div>
-                        <div className="col-md-8">
-                          <h4>{p.name}</h4>
+                        <div className="order-card-cart-info col-md-8">
+                          <h3>{p.name}</h3>
                           {console.log(p.description)}
-                          <h6>{p.description.substring(0, 30)}</h6>
-                          <h6>Price : {p.price}</h6>
+                          <h5>{p.description.substring(0, 30)}</h5>
+                          <h5>Price : {p.price}</h5>
                         </div>
                       </div>
                     ))}

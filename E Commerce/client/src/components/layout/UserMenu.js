@@ -12,15 +12,16 @@ const UserMenu = () => {
             <h4>Dashboard</h4>
             <NavLink
               to="/dashboard/user/profile"
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action d-flex justify-content-start align-items-center"
             >
-              <CgProfile /> Profile
+              <CgProfile size={24} />
+              <span className="ml-2"> Profile</span>
             </NavLink>
             <NavLink
               to="/dashboard/user/orders"
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action  d-flex justify-content-start align-items-center"
             >
-              <BsCart3 /> Orders
+              <BsCart3 size={24} /> <span className="ml-2">Orders</span>
             </NavLink>
           </div>
         </div>
