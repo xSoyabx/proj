@@ -63,13 +63,13 @@ const ProductDetails = () => {
         </div>
         <hr />
 
-        <div className="row container">
-          <h6>Similar Products</h6>
+        <div>
+          <h3 className="text-center">Similar Products</h3>
           {relatedProducts.length < 1 && (
             <p className="text-center">No Similar Product Found</p>
           )}
 
-          <div className="d-flex flex-wrap">
+          <div className="d-flex flex-wrap justify-content-around">
             {relatedProducts?.map((p) => (
               <div className={"card-1"} key={p._id}>
                 <div className="product-image-container">
