@@ -42,7 +42,7 @@ const ProductDetails = () => {
       <div class="specific-page-background">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-4 detail-box">
+            <div className="col-md-5 detail-box">
               <img
                 src={`/api/v1/product/product-photo/${product._id}`}
                 className="card-img-top"
@@ -51,13 +51,17 @@ const ProductDetails = () => {
                 // width={"350px"}
               />
             </div>
-            <div className="col-md-8 detail-box-2">
+            <div className="col-md-7 detail-box-2">
               <h1 className="text-center">Product Details</h1>
-              <h6>Name : {product.name}</h6>
-              <h6>Description : {product.description}</h6>
-              <h6>Price : {product.price}</h6>
-              <h6>Category : {product?.category?.name}</h6>
+              <div className="product-detail-box">
+              <h1 id="p-brand">{product.brand}</h1>
+              <h1 id="p-name">{product.name}</h1>
+              <h6 id="p-category">Category : {product?.category?.name}</h6>
+              <h3 id="p-description">
+                <h6 id="p-t-description">Description</h6>{product.description}</h3>
+              <h6 id="p-price">₹{product.price}</h6>
               <button className="btn btn-secondary ms-2">Add to cart</button>
+            </div>
             </div>
           </div>
         </div>

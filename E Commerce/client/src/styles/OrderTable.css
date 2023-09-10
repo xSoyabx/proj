@@ -17,7 +17,10 @@
 }
 
 .content-table thead tr {
-  background-color: #f4780c;
+  /* background-color: #f4780c; */
+  background: rgb(5, 19, 54) ;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.6px);
   color: #ffffff;
   text-align: left;
   font-weight: bold;
@@ -37,7 +40,7 @@
 }
 
 .content-table tbody tr:last-of-type {
-  border-bottom: 2px solid #f4780c;
+  border-bottom: 2px solid rgb(5, 24, 73);
 }
 
 .content-table tbody tr.active-row {
@@ -55,7 +58,7 @@
   margin-bottom: 20px;
   color: #fff;
   word-wrap: break-word;
-  background: rgba(46, 44, 44, 0.779);
+  background: rgba(31, 31, 31, 0.779);
   background-clip: border-box;
   border: 2px solid #414141;
   border-radius: 20px;
@@ -66,7 +69,7 @@
   width: 90%;
   padding: 15px;
   /* border: 1px solid rgb(92, 92, 92); */
-  background: #181a1b;
+  background: #000000;
   height: auto; /* Adjust the height to fit the container */
   transition: transform 0.5s ease;
   object-fit: cover; /* Maintain aspect ratio and cover the container */
