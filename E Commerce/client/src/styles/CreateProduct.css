@@ -31,13 +31,15 @@
   /* width: 100%; */
   text-align: left;
 margin: 0;
-  background-color: #120202;
+  /* background-color: #120202; */
+  background-color: #030f1f;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   padding: 10px 20px;
   cursor: pointer;
 }
+
 
 .CreateProduct img {
   max-width: 40%;
@@ -49,16 +51,19 @@ margin: 0;
   padding: 12.5px 30px;
   border: 0;
   border-radius: 100px;
-  background-color: #127dc4;
-  color: #ffffff;
+  /* background-color: #127dc4; */
+  /* background-color: #1de90a; */
+  background-color: #ffffff;
+  color: #000000;
   font-weight: Bold;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
 
 .CreateBtn:hover {
-  background-color: #6fc5ff;
-  box-shadow: 0 0 20px #6fc5ff50;
+  /* background-color: #6fc5ff; */
+  background-color: #8bef82;
+  box-shadow: 0 0 20px #66ff735d;
   transform: scale(1.1);
 }
 
@@ -84,7 +89,8 @@ margin: 0;
   border: none;
   outline: none;
   caret-color: rgba(7, 7, 7, 0.945);
-  background-color: #120202;
+  /* background-color: #120202; */
+  background-color: #030f1f;
   border-radius: 30px;
   padding-left: 15px;
   letter-spacing: 0.8px;
@@ -94,17 +100,17 @@ margin: 0;
 /* Customize select elements */
 .CreateProduct .form-select {
   border: none;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 10px;
   margin: 5px 0;
   width: 100%;
-  background-color: #120202;
+  background-color: #030f1f;
 }
 
 .form-select .ant-select-selection-placeholder,
 .form-select .ant-select-selection-selected-value,
 .form-select .ant-select-selection-item {
-  color: #fff !important; /* Change the color as per your preference */
+  color: #969696 !important; /* Change the color as per your preference */
   font-weight: bold !important; /* Add other text styles as needed */
 }
 
@@ -120,7 +126,7 @@ margin: 0;
 }
 .CreateProduct ::placeholder {
   font-size: large;
-  color: #fff;
+  color: #969696;
   padding-left: 10px;
 }
 
