@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
 import { useNavigate } from "react-router-dom";
+import "../../styles/CreateProduct.css";
+
 const { Option } = Select;
 
 const CreateProduct = () => {
@@ -91,14 +93,14 @@ const CreateProduct = () => {
 
   return (
     <Layout title={"Dashboard - Create Product"}>
-      <div className="conatiner-fluid m-3 p3">
+      <div className="conatiner-fluid p-3">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />
           </div>
           <div className="col-md-9">
-            <h1>Create Product</h1>
-            <div className="m-1 w-75">
+            <h1 className="text-center">Create Product</h1>
+            <div className="CreateProduct">
               <Select
                 bordered={false}
                 placeholder="Select a category"
@@ -110,7 +112,7 @@ const CreateProduct = () => {
                 }}
               >
                 {categories?.map((c) => (
-                  <Select.Option key={c._id} value={c._id}>
+                  <Select.Option key={c._id} value={c._id} className="custom-option">
                     {c.name}
                   </Select.Option>
                 ))}
@@ -196,12 +198,12 @@ const CreateProduct = () => {
                     setShipping(value);
                   }}
                 >
-                  <Select.Option value="0">No</Select.Option>
-                  <Select.Option value="1">Yes</Select.Option>
+                  <Select.Option className="custom-option" value="0">No</Select.Option>
+                  <Select.Option className="custom-option"value="1">Yes</Select.Option>
                 </Select>
               </div>
               <div className="mb-3">
-                <button className="btn btn-primary" onClick={handleCreate}>
+                <button className="CreateBtn" onClick={handleCreate}>
                   CREATE PRODUCT
                 </button>
               </div>

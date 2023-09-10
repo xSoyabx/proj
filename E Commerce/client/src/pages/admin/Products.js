@@ -88,20 +88,21 @@ const Products = () => {
 
   return (
     <Layout>
-      <div className="row">
-        <div className="col-md-3">
-          <AdminMenu />
-        </div>
-        <div className="col-md-9">
-          <h1 className="text-center">All Products List</h1>
-          <div className="row">
-            {products?.map((p) => (
-              <div className="col-md-4 mb-4" key={p._id}>
-                <Link
-                  to={`/dashboard/admin/product/${p.slug}`}
-                  className="product-link"
-                >
-                  {/* <div className="card" style={{ width: "18rem" }}>
+      <div className="conatiner-fluid p-3">
+        <div className="row">
+          <div className="col-md-3">
+            <AdminMenu />
+          </div>
+          <div className="col-md-9">
+            <h1 className="text-center">All Products List</h1>
+            <div className="row">
+              {products?.map((p) => (
+                <div className="col-md-4 mb-4" key={p._id}>
+                  <Link
+                    to={`/dashboard/admin/product/${p.slug}`}
+                    className="product-link"
+                  >
+                    {/* <div className="card" style={{ width: "18rem" }}>
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
@@ -112,35 +113,36 @@ const Products = () => {
                       <p className="card-text">{p.description}</p>
                     </div>
                   </div> */}
-                  <div className="card-1" key={p._id}>
-                    <div className="product-image-container">
-                      <img
-                        className="product-image"
-                        src={`/api/v1/product/product-photo/${p._id}`}
-                        alt="Product Image"
-                      />
+                    <div className="card-1" key={p._id}>
+                      <div className="product-image-container">
+                        <img
+                          className="product-image"
+                          src={`/api/v1/product/product-photo/${p._id}`}
+                          alt="Product Image"
+                        />
+                      </div>
+                      <div className="product-details">
+                        <h4 className="product-brand-h4">
+                          <b>Brand :</b> {p.brand}
+                        </h4>
+                        <h4 className="product-name-h4">
+                          <b>Name :</b> {p.name}
+                        </h4>
+                        <h4 className="product-description-h4">
+                          <b>Desc :</b> {p.description}
+                        </h4>
+                        <h4 className="product-qty-h4">
+                          <b>Qty :</b> {p.quantity}
+                        </h4>
+                        <h4 className="product-price-h4">
+                          <b>Price :</b> ₹ {p.price}
+                        </h4>
+                      </div>
                     </div>
-                    <div className="product-details">
-                      <h4 className="product-brand-h4">
-                        <b>Brand :</b> {p.brand}
-                      </h4>
-                      <h4 className="product-name-h4">
-                        <b>Name :</b> {p.name}
-                      </h4>
-                      <h4 className="product-description-h4">
-                        <b>Desc :</b> {p.description}
-                      </h4>
-                      <h4 className="product-qty-h4">
-                        <b>Qty :</b> {p.quantity}
-                      </h4>
-                      <h4 className="product-price-h4">
-                        <b>Price :</b> ₹ {p.price}
-                      </h4>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
