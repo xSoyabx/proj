@@ -386,6 +386,12 @@ img {
   box-shadow: none;
 }
 
+.ManageCategory{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* admin-submit-button */
 /* .admin-submit-button {
   width: 140px;
@@ -666,42 +672,42 @@ img {
   }
 
   30% {
-    content: "#{+.";}35%{content: "@}-?";
+    content: "#{.";}35%{content: "}-?";
   }
 
   40% {
-    content: "?{4@%";
+    content: "?{%";
   }
 
   45% {
-    content: "=.,^!";
+    content: "=^!";
   }
 
   50% {
-    content: "?2@%";
+    content: "?@%";
   }
 
   55% {
-    content: "\;1}]";
+    content: "\}]";
   }
 
   60% {
-    content: "?{%:%";
+    content: "?{:";
     right: 0;
   }
 
   65% {
-    content: "|{f[4";
+    content: "{f[";
     right: 0;
   }
 
   70% {
-    content: "{4%0%";
+    content: "{4%";
     right: 0;
   }
 
   75% {
-    content: "'1_0<";
+    content: "'0<";
     right: 0;
   }
 

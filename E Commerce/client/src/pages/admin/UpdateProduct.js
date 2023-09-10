@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
+import "../../styles/CreateProduct.css";
+
 const { Option } = Select;
 
 const UpdateProduct = () => {
@@ -52,7 +54,7 @@ const UpdateProduct = () => {
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something wwent wrong in getting catgeory");
+      toast.error("Something went wrong in getting catgeory");
     }
   };
 
@@ -105,14 +107,14 @@ const UpdateProduct = () => {
   };
   return (
     <Layout title={"Dashboard - Create Product"}>
-      <div className="container-fluid m-3 p-3">
+      <div className="container-fluid p-3">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />
           </div>
           <div className="col-md-9">
             <h1>Update Product</h1>
-            <div className="m-1 w-75">
+            <div className="CreateProduct">
               <Select
                 bordered={false}
                 placeholder="Select a category"
@@ -125,7 +127,7 @@ const UpdateProduct = () => {
                 value={category}
               >
                 {categories?.map((c) => (
-                  <Option key={c._id} value={c._id}>
+                  <Option key={c._id} value={c._id} className="custom-option">
                     {c.name}
                   </Option>
                 ))}
@@ -221,17 +223,17 @@ const UpdateProduct = () => {
                   }}
                   value={shipping ? "yes" : "No"}
                 >
-                  <Option value="0">No</Option>
-                  <Option value="1">Yes</Option>
+                  <Option className="custom-option" value="0">No</Option>
+                  <Option className="custom-option" value="1">Yes</Option>
                 </Select>
               </div>
               <div className="mb-3">
-                <button className="btn btn-primary" onClick={handleUpdate}>
+                <button className="btn btn-update" onClick={handleUpdate}>
                   UPDATE PRODUCT
                 </button>
               </div>
               <div className="mb-3">
-                <button className="btn btn-danger" onClick={handleDelete}>
+                <button className="btn btn-delete" onClick={handleDelete}>
                   DELETE PRODUCT
                 </button>
               </div>
