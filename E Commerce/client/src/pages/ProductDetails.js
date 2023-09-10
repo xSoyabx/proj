@@ -52,7 +52,7 @@ const ProductDetails = () => {
               />
             </div>
             <div className="col-md-7 detail-box-2">
-              <h1 className="text-center">Product Details</h1>
+              {/* <h1 className="text-center">Product Details</h1> */}
               <div className="product-detail-box">
               <h1 id="p-brand">{product.brand}</h1>
               <h1 id="p-name">{product.name}</h1>
