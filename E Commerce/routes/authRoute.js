@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  ContactUsController,
   forgetPasswordController,
   getAllOrdersController,
   getOrdersController,
@@ -54,3 +55,6 @@ router.put(
   isAdmin,
   orderStatusController
 );
+
+//Contact Us || METHOD POST
+router.post("/contactMessage", ContactUsController);

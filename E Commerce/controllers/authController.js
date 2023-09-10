@@ -2,6 +2,7 @@ import { comparePassword, hashPassword } from "../helpers/authHelper.js";
 import userModel from "../models/userModel.js";
 import orderModel from "../models/orderModel.js";
 import JWT from "jsonwebtoken";
+import ContactUsModel from "../models/ContactUsModel.js";
 
 export const registerController = async (req, res) => {
   try {
@@ -300,6 +301,42 @@ export const orderStatusController = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "Error While Updateing Order",
+      error,
+    });
+  }
+};
+
+export const ContactUsController = async (req, res) => {
+  try {
+    const { fullname, email, message } = req.body;
+
+    //Validations
+    if (!fullname) {
+      return res.send({ message: "Name is required" });
+    }
+    if (!email) {
+      return res.send({ message: "Email is required" });
+    }
+    if (!message) {
+      return res.send({ message: "Message is required" });
+    }
+    //save
+    const user = await new ContactUsModel({
+      fullname,
+      email,
+      message,
+    }).save();
+
+    res.status(201).send({
+      success: true,
+      message: "Message Sended Successfully",
+      user,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Error in Message Transfer",
       error,
     });
   }
