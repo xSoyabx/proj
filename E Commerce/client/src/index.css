@@ -988,3 +988,47 @@ img {
   object-fit: cover;
   border-radius: 0;
 }
+
+.policy-page{
+  color: #ffffff;
+  padding: 20px;
+  padding-bottom: 8%;
+  height: 100%;
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#policy-head {
+  position: relative;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+#policy-head::before {
+  /* Adjust the thickness and color as needed */
+  content: "";
+  position: absolute;
+  justify-content: center;
+  bottom: -7px;
+  width: 230px;
+  height: 5px;
+  /* background: linear-gradient(135deg, #88ff00, #ffffff); */
+  background: linear-gradient(130deg, #187cff, #af0095 41.07%, #ff8002 76.05%);
+}
+
+.policy-content{
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-content p{
+  text-align: center;
+}
+
+.policy-content h3{
+  text-align: center;
+}
