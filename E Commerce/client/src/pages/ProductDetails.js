@@ -39,17 +39,18 @@ const ProductDetails = () => {
   };
   return (
     <Layout>
-      <div className="row container mt-2">
-        <div className="col-md-6">
+      <div class="specific-page-background">
+      <div className="more-detail-container">
+        <div className="deatil-box">
           <img
             src={`/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
             alt={product.name}
-            height="300"
-            width={"350px"}
+            // height="300"
+            // width={"350px"}
           />
         </div>
-        <div className="col-md-6">
+        <div className="detail-box-2">
           <h1 className="text-center">Product Details</h1>
           <h6>Name : {product.name}</h6>
           <h6>Description : {product.description}</h6>
@@ -126,6 +127,7 @@ const ProductDetails = () => {
             </div>
           ))}
         </div> */}
+      </div>
       </div>
     </Layout>
   );
