@@ -42,7 +42,7 @@ const ProductDetails = () => {
       <div class="specific-page-background">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4 detail-box">
               <img
                 src={`/api/v1/product/product-photo/${product._id}`}
                 className="card-img-top"
@@ -51,7 +51,7 @@ const ProductDetails = () => {
                 // width={"350px"}
               />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-8 detail-box-2">
               <h1 className="text-center">Product Details</h1>
               <h6>Name : {product.name}</h6>
               <h6>Description : {product.description}</h6>
