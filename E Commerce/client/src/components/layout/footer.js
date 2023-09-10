@@ -216,12 +216,12 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink
-                  to="#"
+                  to="/about"
                   className="nav-link-1"
                   aria-current="page"
                   onClick={scrollToTop}
                 >
-                  Terms
+                  About Us
                 </NavLink>
               </li>
               <li>

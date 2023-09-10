@@ -2,12 +2,20 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Layout from "../components/layout/layout";
 import { useParams, useNavigate } from "react-router-dom";
+import { useCart } from "../context/cart";
+import { toast } from "react-hot-toast";
 import "../styles/productCard.css";
 
 const ProductDetails = () => {
+  const navigate = useNavigate();
+  const [cart, setCart] = useCart();
   const params = useParams();
   const [product, setProduct] = useState({});
   const [relatedProducts, setRelatedProducts] = useState([]);
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
 
   //initial product details
   useEffect(() => {
@@ -54,14 +62,16 @@ const ProductDetails = () => {
             <div className="col-md-7 detail-box-2">
               {/* <h1 className="text-center">Product Details</h1> */}
               <div className="product-detail-box">
-              <h1 id="p-brand">{product.brand}</h1>
-              <h1 id="p-name">{product.name}</h1>
-              <h6 id="p-category">Category : {product?.category?.name}</h6>
-              <h3 id="p-description">
-                <h6 id="p-t-description">Description</h6>{product.description}</h3>
-              <h6 id="p-price">₹{product.price}</h6>
-              <button className="btn btn-secondary ms-2">Add to cart</button>
-            </div>
+                <h1 id="p-brand">{product.brand}</h1>
+                <h1 id="p-name">{product.name}</h1>
+                <h6 id="p-category">Category : {product?.category?.name}</h6>
+                <h3 id="p-description">
+                  <h6 id="p-t-description">Description</h6>
+                  {product.description}
+                </h3>
+                <h6 id="p-price">₹{product.price}</h6>
+                <button className="btn btn-secondary ms-2">Add to cart</button>
+              </div>
             </div>
           </div>
         </div>
@@ -93,17 +103,20 @@ const ProductDetails = () => {
                 <div className="buttons-container">
                   <button
                     className="button"
-                    // onClick={() => navigate(`/product/${p.slug}`)}
+                    onClick={() => {
+                      navigate(`/product/${p.slug}`);
+                      scrollToTop();
+                    }}
                   >
                     More Details
                   </button>
                   <button
                     className="button"
-                    // onClick={() => {
-                    //   setCart([...cart, p]);
-                    //   localStorage.setItem("cart", JSON.stringify([...cart, p]));
-                    //   toast.success("Product Added To Cart");
-                    // }}
+                    onClick={() => {
+                      setCart([...cart, p]);
+                      localStorage.setItem("cart", JSON.stringify([...cart, p]));
+                      toast.success("Product Added To Cart");
+                    }}
                   >
                     Add to Cart
                   </button>
