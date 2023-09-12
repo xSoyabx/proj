@@ -32,6 +32,12 @@ main {
   box-sizing: border-box;
 }
 
+/* .mask1 {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
+  mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
+} */
+
+
 h1 {
   color: #ffffff;
 }
@@ -148,10 +154,10 @@ button.navbar-toggler {
   color: #cfcfcf;
 }
 .navbar-nav .nav-link:hover {
-  color: #ff8138;
+  color: rgb(255, 70, 215);
 }
 .navbar-nav .nav-link.active {
-  color: #a0a0a0;
+  color: #bcbcbc;
 }
 .nav-link-2 {
   text-decoration: none;
@@ -160,7 +166,7 @@ button.navbar-toggler {
   transition: color 0.3s;
 }
 .nav-link-2:hover {
-  color: #ff8138;
+  color: rgb(255, 70, 215);
 }
 .nav-link-2.dropdown-toggle.show {
   color: #cfcfcf;
@@ -420,9 +426,9 @@ img {
 
 /* admin-submit-button */
 .ui-btn {
-  --btn-default-bg: rgb(41, 41, 41);
+  --btn-default-bg: rgb(37, 37, 37);
   --btn-padding: 15px 20px;
-  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-hover-bg: rgb(10, 10, 10);
   --btn-transition: 0.3s;
   --btn-letter-spacing: 0.1rem;
   --btn-animation-duration: 1.2s;
@@ -449,7 +455,7 @@ img {
   color: var(--default-btn-color);
   font: var(--font-weight) var(--font-size) var(--font-family);
   background: var(--btn-default-bg);
-  border: none;
+  border: 1px solid #ffffff;
   cursor: pointer;
   transition: var(--btn-transition);
   overflow: hidden;
