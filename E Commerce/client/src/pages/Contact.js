@@ -100,7 +100,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className="inputBox">
-                  <input type="submit" value="Register" />
+                  <input type="submit" value="Submit" />
                 </div>
               </form>
             </div>
