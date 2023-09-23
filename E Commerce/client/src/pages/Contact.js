@@ -134,11 +134,10 @@ const Contact = () => {
             </Link>
           </p>
           <p className="mt-3">
-            <BiMailSend /> : dummy@email.com
+            <BiMailSend /> : rohini_helmet@email.com
           </p>
           <p className="mt-3">
-            <BiPhoneCall /> : 012-3456789
-          </p>
+            <BiPhoneCall /> : 9990761180          </p>
         </div>
       </div>
     </Layout>
