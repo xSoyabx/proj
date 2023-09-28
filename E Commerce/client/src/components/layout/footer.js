@@ -189,7 +189,7 @@ const Footer = () => {
             </ul>
             <ul className="ul-2">
               <li className="li-2">
-                <BiMailSend /> : dummy@email.com
+                <BiMailSend /> : rohini_helmet@gmail.com
               </li>
               <li className="li-2">
                 <BiPhoneCall id="phone" /> : 098914 08448
