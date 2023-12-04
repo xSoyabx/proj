@@ -170,7 +170,7 @@ export const testController = (req, res) => {
 //     const { name, email, password, address, phone } = req.body;
 //     const user = await userModel.findById(req.user._id);
 
-//     //password
+//     password
 //     if (password && password.length <= 8) {
 //       return res.json({
 //         error:
